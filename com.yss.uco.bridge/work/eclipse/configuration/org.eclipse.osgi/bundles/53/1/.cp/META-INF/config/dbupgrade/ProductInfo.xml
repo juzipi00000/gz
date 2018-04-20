@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品信息 描述文件
+	由于维护产品的层级关系。
+	注意：定义的模块代码不能重复
+-->
+<!-- code:产品代码， name:产品名称 -->
+<product code="FAST" name="FAST平台">
+	<!-- 系统模块  code:一级模块代码， name:一级模块名称-->
+	<module_1 code="SYSTEM" name="系统" >
+		<!-- 通讯组件模块 code:二级模块代码      name: 二级模块名称 -->
+		<module_2 code="CP" name="通讯组件">
+			<!-- 邮件模块 code:三级模块代码   name: 三级模块名称 -->
+			<module_3 code="MAIL" name="邮件" >
+			</module_3>
+			<!-- 传真模块 -->
+			<module_3 code="FAX" name="传真" >
+			</module_3>
+		</module_2>
+		<!-- 权限模块  -->
+		<module_2 code="RIGHT" name="权限" >
+			<!-- 岗位权限  -->
+			<module_3 code="USERPOST" name="岗位权限" >
+			</module_3>
+		</module_2>
+		<!-- 流程管理模块  -->
+		<module_2 code="FAST_WFMANAGER" name="流程管理" >
+			<!-- 流程模块  -->
+			<module_3 code="WORKFLOW" name="流程" >
+			</module_3>
+			<!-- 定时任务模块  -->
+			<module_3 code="SCHEDULER" name="定时任务" >
+			</module_3>
+		</module_2>
+		<!-- 系统框架  -->
+		<module_2 code="FAST_FRAMEWORK" name="系统框架" >
+			<!-- 运行环境模块  -->
+			<module_3 code="RUNTIME" name="运行环境" >
+			</module_3>
+		</module_2>
+		
+		<module_2 code="FAST_SYSTEMMGR" name="系统管理" >
+			<!-- 运行环境模块  -->
+			<module_3 code="WORKSPACE" name="工作面板" >
+			</module_3>
+		</module_2>
+		
+		<module_2 code="FAST_SCHEDULER" name="任务调度" >
+		</module_2>
+		
+		<module_2 code="FAST_DBLINK" name="数据库链接" >
+		</module_2>
+		<module_2 code="FAST_NAVIGATION" name="业务导航" >
+		</module_2>
+		<module_2 code="FAST_MESSAGE" name="消息" >
+		</module_2>
+		<module_2 code="FAST_TASK" name="任务管理" >
+		</module_2>
+		
+		<module_2 code="FAST_DOCTOR" name="性能诊断">
+		</module_2>
+		
+		<module_2 code="FAST_LICENSE" name="许可证">
+		</module_2>
+		
+		<module_2 code="FAST_APPLICATION" name="应用"></module_2>
+		
+		<module_2 code="FAST_LOG" name="日志"></module_2>
+		
+		<module_2 code="FAST_MONITOR" name="监控"></module_2>
+		
+		<module_2 code="FAST_ELECTRONIC_SEAL" name="电子对账"></module_2>
+		
+		<!-- 数据交换（数据集成） -->
+		<module_2 code="FAST_DATAINTERGRATION" name="数据集成">
+			<!-- 导入  -->
+			<module_3 code="FAST_DI_IMP" name="数据导入" >
+			</module_3>
+			
+			<module_3 code="FAST_DI_EXP" name="数据导出" >
+			
+			</module_3>
+			<module_3 code="FAST_DI_OTHER" name="数据集成_其他" >
+			</module_3>
+		</module_2>
+		
+		<module_2 code="FAST_HOME_TIPS" name="首页提示"></module_2>
+		<module_2 code="FAST_TEMPRELA" name="文档模板策略"></module_2>
+		<module_2 code="FAST_NOTICE" name="公告信息"></module_2>
+		<module_2 code="FAST_OPER" name="操作信息"></module_2>
+		<module_2 code="FAST_RELA_INDEX" name="指标管理功能模块"></module_2>
+		<module_2 code="FAST_RELEVANCY_FUN" name="关联菜单"></module_2>
+		<module_2 code="FAST_REMIND" name="提醒信息"></module_2>
+		<module_2 code="FAST_SYSTEMMANAGER" name="系统管理"></module_2>
+		<module_2 code="FAST_ATOMICDATA" name="基础数据"></module_2>
+		
+	</module_1>
+</product>

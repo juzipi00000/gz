@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品信息 描述文件
+	由于维护产品的层级关系。
+	注意：定义的模块代码不能重复
+-->
+<!-- code:产品代码， name:产品名称 -->
+<product code="DATAMIG" name="数据迁移平台">
+	<!-- 系统模块  code:一级模块代码， name:一级模块名称-->
+	<module_1 code="SYSTEM" name="系统" >
+		<!-- 数据迁移组件模块 code:二级模块代码      name: 二级模块名称 -->
+		<module_2 code="MIG" name="数据迁移组件">
+			<!-- 科目映射模块 code:三级模块代码   name: 三级模块名称 -->
+			<module_3 code="MAP" name="科目映射" >
+			</module_3>
+			<!-- 其他模块 code:三级模块代码   name: 三级模块名称 -->
+			<module_3 code="CENTER" name="数据中心" >
+			</module_3>
+			<!-- 数据采集 -->
+			<module_3 code="CLT" name="数据采集" >
+			</module_3>
+		</module_2>
+		<!-- 权限模块  -->
+		<module_2 code="RIGHT" name="权限" >
+		</module_2>
+	</module_1>
+</product>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/WebRoot</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>false</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation>E:\yss\FAST\FAST1.1\FAST1.1.6\发布包\PLATFORM.war</warLocation>
+    <extraInfo></extraInfo>
+    <webPath>/PLATFORM</webPath>
+</tomcatProjectProperties>

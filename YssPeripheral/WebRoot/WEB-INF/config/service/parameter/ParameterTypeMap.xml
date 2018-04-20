@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+	<class clientclass="System.Int16" serverclass="java.lang.Short" paraclass="short"/>
+	<class clientclass="System.Int32" serverclass="java.lang.Integer" paraclass="int"/>
+	<class clientclass="System.Int64" serverclass="java.lang.Long" paraclass="long"/>
+	<class clientclass="System.Single" serverclass="java.lang.Float" paraclass="float"/>
+	<class clientclass="System.Double" serverclass="java.lang.Double" paraclass="double"/>
+	<class clientclass="System.Decimal" serverclass="java.math.BigDecimal" paraclass="java.math.BigDecimal"/>
+	<class clientclass="System.DateTime" serverclass="java.util.Date" paraclass="java.util.Date"/>
+	<class clientclass="System.String" serverclass="java.lang.String" paraclass="java.lang.String"/>
+	<class clientclass="java.lang.Short" serverclass="java.lang.Short" paraclass="short"/>
+	<class clientclass="java.lang.Integer" serverclass="java.lang.Integer" paraclass="int"/>
+	<class clientclass="java.lang.Long" serverclass="java.lang.Long" paraclass="long"/>
+	<class clientclass="java.lang.Float" serverclass="java.lang.Float" paraclass="float"/>
+	<class clientclass="java.lang.Double" serverclass="java.lang.Double" paraclass="double"/>
+	<class clientclass="java.math.BigDecimal" serverclass="java.math.BigDecimal" paraclass="java.math.BigDecimal"/>
+	<class clientclass="java.sql.Date" serverclass="java.sql.Date" paraclass="java.sql.Date"/>
+	<class clientclass="java.util.Date" serverclass="java.util.Date" paraclass="java.util.Date"/>
+	<class clientclass="java.lang.String" serverclass="java.lang.String" paraclass="java.lang.String"/>
+</classes>

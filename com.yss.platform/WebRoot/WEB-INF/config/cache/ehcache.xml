@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false">
+	<diskStore path="java.io.tmpdir" />
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="false"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU" />	
+	<cache name="ArrayList" maxElementsInMemory="2000" eternal="false"
+		maxElementsOnDisk="1000" overflowToDisk="false" timeToIdleSeconds="0"
+		timeToLiveSeconds="0" memoryStoreEvictionPolicy="LFU">
+		<bootstrapCacheLoaderFactory
+			class="com.yss.framework.api.cache.EHCacheLoader" properties="cacheClass=com.yss.platform.cache.NoticeCache">
+		</bootstrapCacheLoaderFactory>
+	</cache>
+	
+	<!-- STORY #40804 界面打开时数据安全检查SafeData通过缓存获取 雷建华 20170322 -->
+	<cache name="SafeData" maxElementsInMemory="50000" eternal="false"
+		maxElementsOnDisk="10000" overflowToDisk="true" timeToIdleSeconds="0"
+		timeToLiveSeconds="0" memoryStoreEvictionPolicy="LFU">
+		<bootstrapCacheLoaderFactory
+			class="com.yss.framework.api.cache.EHCacheLoader" properties="cacheClass=com.yss.platform.cache.SafeDataCache">
+		</bootstrapCacheLoaderFactory>
+	</cache>
+</ehcache>  

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品信息 描述文件
+	由于维护产品的层级关系。
+	注意：定义的模块代码不能重复
+-->
+<!-- code:产品代码， name:产品名称 -->
+<product code="YSSUCO" name="业务处理平台">
+	<!-- 系统模块  code:一级模块代码， name:一级模块名称-->
+	<module_1 code="SYSTEM" name="系统" >
+		<!-- 模块 code:二级模块代码      name: 二级模块名称 -->
+		<module_2 code="TEMPTABLE" name="核算和清算临时表">
+			<!-- 模块 code:三级模块代码   name: 三级模块名称 -->
+			<module_3 code="CLEAR" name="清算临时表" />
+			<!-- 估值临时表 -->
+			<module_3 code="VALUATION" name="估值临时表" />
+		</module_2>
+		<!-- 交易数据模块  -->
+		<module_2 code="TRADEDATA" name="投资交易数据" />
+		<!-- 库存数据表模块  -->
+		<module_2 code="STOCKTABLE" name="库存数据表" />
+		<!-- 参数管理表 -->
+		<module_2 code="PARAMS" name="参数管理表" />
+		<!-- 财务模块  -->
+		<module_2 code="FINANCE" name="财务管理数据表" />
+		<!-- 估值报表  -->
+		<module_2 code="VALUATIONREPORT" name="估值报表数据表" />
+		<!-- 业务视图  -->
+		<module_2 code="BUSINESSVIEW" name="业务视图" />
+		<!-- 产品管理 -->
+		<module_2 code="PRODUCTMANAGE" name="产品管理" />
+		<!-- 投资订单模块 -->
+		<module_2 code="INVESTORDER" name="投资订单模块" />
+		<!-- 资产调整 -->
+		<module_2 code="ASSETADJUST" name="资产调整" />
+	</module_1>
+</product>

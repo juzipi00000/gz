@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pojos>	
+	<!-- 总分对账 -->
+	<pojo id="Zfdz" class="elecreco.zwhd.zfdz.pojo.Zfdz" />
+	<pojo id="ZfdzDetail" class="elecreco.zwhd.zfdz.pojo.ZfdzDetail" />
+	<pojo id="ZdCorpOrg" class="com.yss.elecreco.oraclezz.zdorg.pojo.ZdCorpOrg" />
+	<pojo id="ZdOrgTreeView" class="com.yss.elecreco.oraclezz.zdorg.pojo.ZdOrgTreeView" />
+	<pojo id="Zhzd" class="com.yss.elecreco.oraclezz.zhzd.pojo.Zhzd" />
+	<pojo id="Zzywgl_A" class="com.yss.elecreco.oraclezz.zzywgl.pojo.Zzywgl_A" />
+	<pojo id="Zzywgl" class="com.yss.elecreco.oraclezz.zzywgl.pojo.Zzywgl" />
+	<pojo id="ZzywToView" class="com.yss.elecreco.oraclezz.zzywgl.pojo.ZzywToView" />
+	
+	<!-- 对账设置start -->
+	<pojo id="KMX" menuId="AccSubjectX" class="com.yss.fina.sc.kmx.pojo.KMX"/>
+	<pojo id="KmxPlan" menuId="AccSubjectX_A" class="com.yss.fina.sc.kmxplan.pojo.KmxPlan"/>
+	<pojo id="KMChkMap" menuId="AccSubjectX_MAP" class="com.yss.fina.sc.kmchkmap.pojo.KMChkMap"/>
+	<pojo id="KMChk" menuId="AccSubjectX_CHK" class="kmchk.pojo.KMChk"/>
+	
+	<!-- 科目核对结果begin -->
+	<pojo id="KmChkRes" menuId="AccSubjectXRes" class="kmchkres.pojo.KmChkRes"/>
+	<pojo id="KmQuery" menuId="AccSubjectXRes" class="com.yss.fina.sc.kmchkres.pojo.KmQuery"/>
+	<pojo id="KmChkAffirm" menuId="AccSubjectXAffirm" class="kmchkaffirm.pojo.KmChkAffirm"/>
+	<!-- 科目核对结果end -->	
+
+	<pojo id="OldKmb" menuId="OldKMBData" class="com.yss.elecreco.zwhd.vb.pojo.OldKmb"/>
+	<pojo id="NewKmb" menuId="" class="com.yss.elecreco.zwhd.vb.pojo.NewKmb"/>
+	
+	<pojo id="CwHd" menuId="" class="com.yss.elecreco.zwhd.vb.pojo.CwHd"/>
+	
+	<!-- Kettle导出接口 -->
+	<pojo id="KettleGroup" menuId="kettleExportGroup" class="com.yss.kettle.kettlegroup.pojo.KettleGroup"/>
+	<pojo id="KettleRela" menuId="kettleExport" class="com.yss.kettle.kettlerela.pojo.KettleRela"></pojo>
+	
+	<pojo id="KmMap" menuId="KmMaping" class="com.yss.elecreco.kmmaping.pojo.KmMaping"></pojo>
+</pojos>

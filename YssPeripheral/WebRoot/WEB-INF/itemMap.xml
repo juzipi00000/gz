@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Maps>
+    <!-- 2.5指标 -->
+	<Map version = "2.5" A0 = "902今日单位净值：" c_key_code = "DWJZ"  desc = "单位净值"/>
+	<Map version = "2.5" A0 = "702基金单位净值：" c_key_code = "DWJZ"  desc = "单位净值"/>
+	<Map version = "2.5" A0 = "605负债类合计：" c_key_code = "FZHJ"  desc = "负债合计"/>
+	<Map version = "2.5" A0 = "601实收基金" c_key_code = "SSZB"  desc = "实收资本"/>
+	<Map version = "2.5" A0 = "601实收资本" c_key_code = "SSZB"  desc = "实收资本"/>
+	<Map version = "2.5" A0 = "604资产类合计：" c_key_code = "ZCHJ"  desc = "资产合计"/>
+	<Map version = "2.5" A0 = "701基金资产净值：" c_key_code = "ZCJZ"  desc = "资产净值"/>
+	<Map version = "2.5" A0 = "602损益平准金未实现" c_key_code = "SYPZJ_WSX"  desc = "损益平准金-未实现"/>
+	<Map version = "2.5" A0 = "602未实现利得平准金" c_key_code = "SYPZJ_WSX"  desc = "损益平准金-未实现"/>
+	<Map version = "2.5" A0 = "603损益平准金" c_key_code = "SYPZJ"  desc = "损益平准金"/>
+	<Map version = "2.5" A0 = "603损益平准金已实现" c_key_code = "SYPZJ_YSX"  desc = "损益平准金-已实现"/>
+	<Map version = "2.5" A0 = "901期初单位净值：" c_key_code = "QCDWJZ"  desc = "期初单位净值"/>
+	<Map version = "2.5" A0 = "902昨日单位净值：" c_key_code = "DWKFPSY"  desc = "昨日单位净值"/>
+	<Map version = "2.5" A0 = "904累计派现金额：" c_key_code = "LJPXJE"  desc = "累计派现金额"/>
+	<Map version = "2.5" A0 = "903净值日增长率：" c_key_code = "RJZZZL"  desc = "日净值增长率"/>
+	<Map version = "2.5" A0 = "914单位可分配收益：" c_key_code = "DWKFPSY"  desc = "单位可分配收益"/>
+	<Map version = "2.5" A0 = "913可分配收益：" c_key_code = "KFPSY"  desc = "可分配收益"/>
+	<Map version = "2.5" A0 = "912实现收益：" c_key_code = "SXSY"  desc = "实现收益"/>
+	<Map version = "2.5" A0 = "903净值增长率：" c_key_code = "BQJZZZL"  desc = "本期净值增长率"/>
+	<Map version = "2.5" A0 = "905累计单位净值：" c_key_code = "LJDWJZ"  desc = "累计单位净值"/>
+	<Map version = "2.5" A0 = "920现金类占净值比：" c_key_code = "XJLZJZB"  desc = "现金类占净值比"/>
+	
+	<!-- 4.0指标 -->
+	<Map version = "4.0" A0 = "9600" c_key_code = "DWJZ"  desc = "单位净值"/>
+	<Map version = "4.0" A0 = "8801" c_key_code = "FZHJ"  desc = "负债合计"/>
+	<Map version = "4.0" A0 = "8700" c_key_code = "SSZB"  desc = "实收资本"/>
+	<Map version = "4.0" A0 = "8800" c_key_code = "ZCHJ"  desc = "资产合计"/>
+	<Map version = "4.0" A0 = "9000" c_key_code = "ZCJZ"  desc = "资产净值"/>
+	<Map version = "4.0" A0 = "8803" c_key_code = "SYPZJ_WSX"  desc = "损益平准金-未实现"/>
+	<Map version = "4.0" A0 = "8806" c_key_code = "SYPZJ_YSX"  desc = "损益平准金-已实现"/>
+	<Map version = "4.0" A0 = "9991" c_key_code = "RJZZZL"  desc = "日净值增长率"/>
+	<Map version = "4.0" A0 = "9612" c_key_code = "LJDWJZ"  desc = "累计单位净值"/>
+</Maps>

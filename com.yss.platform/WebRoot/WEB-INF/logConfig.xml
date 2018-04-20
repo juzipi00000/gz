@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>  
+  <!-- log output to file  -->  
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+	<file>/ucolog/PLATFORM/PLATFORM.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+      	<fileNamePattern>/ucolog/PLATFORM/PLATFORM-%d{yyyy-MM-dd}_%i.log</fileNamePattern>  
+      	<timeBasedFileNamingAndTriggeringPolicy
+            class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        	<maxFileSize>20MB</maxFileSize>
+      	</timeBasedFileNamingAndTriggeringPolicy>
+		<!-- 保留7天的历史日志文件 -->
+      	<maxHistory>7</maxHistory>
+    </rollingPolicy> 
+    <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder"> 
+    	<layout class="com.yss.framework.log.layout.Layout"> 
+      		<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%app] [%file : %line][%method] %X{userName} %msg%n</pattern>  
+    	</layout>
+    	<charset>UTF-8</charset>
+    </encoder>  
+  </appender>  
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  		<filter class="ch.qos.logback.classic.filter.LevelFilter">   
+		      <level>DEBUG</level> <!-- 所有DEBUG级别的日志被丢弃，其它级别的交给下一个过滤器 -->  
+		      <onMatch>ACCEPT</onMatch>
+		      <onMismatch>NEUTRAL</onMismatch>   
+	    </filter>
+	    <filter class="ch.qos.logback.classic.filter.LevelFilter">   
+		      <level>INFO</level>   <!-- 所有INFO级别的日志输出控制台，其它级别的交给下一个过滤器 --> 
+		      <onMatch>ACCEPT</onMatch>
+		      <onMismatch>NEUTRAL</onMismatch>   
+	    </filter>
+	    <filter class="ch.qos.logback.classic.filter.LevelFilter">   
+		      <level>ERROR</level>   <!-- 所有ERROR级别的日志输出控制台，其它级别的丢弃 --> 
+		      <onMatch>ACCEPT</onMatch>
+		      <onMismatch>DENY</onMismatch>   
+	    </filter>
+        <layout class="com.yss.framework.log.layout.Layout">
+            <!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%app] %-5level %X{userName} - %msg%n</pattern> -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%app] [%file : %line] %X{userName} %msg%n</pattern>  
+        </layout>
+  </appender>
+  <appender name="DATABASE" class="com.yss.framework.log.appender.OperLogAppender">
+  </appender>
+  
+    <!-- 日志异步写入数据库 -->
+  <appender name="ASYNC_DB" class="ch.qos.logback.classic.AsyncAppender">  
+    <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+  	<discardingThreshold>0</discardingThreshold>  
+	<!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->  
+    <queueSize>1024</queueSize>
+	<!-- 更改默认的队列的深度,该值会影响性能.默认情况下，当event被加入到queue时，event关联的调用者数据不会被提取 -->  
+    <includeCallerData>true</includeCallerData> 
+	<!-- 添加附加的appender,最多只能添加一个 ,用于异步输出日志文件-->   
+    <appender-ref ref="DATABASE" />
+  </appender>
+  
+  <!-- 日志异步写入目的地  ,这个APPENDER要放在其它APPENDER后面，否则不可用-->
+  <!-- 此appender用于异步输出日志到文件，原引用ROLLING的logger需要改为使用此appender -->
+  <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">  
+    <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+  	<discardingThreshold>0</discardingThreshold>  
+	<!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->  
+    <queueSize>1024</queueSize>
+	<!-- 更改默认的队列的深度,该值会影响性能.默认情况下，当event被加入到queue时，event关联的调用者数据不会被提取 -->  
+    <includeCallerData>true</includeCallerData> 
+	<!-- 添加附加的appender,最多只能添加一个 ,用于异步输出日志文件-->   
+    <appender-ref ref="ROLLING" />
+  </appender>
+  
+  <logger name="druid.sql.Statement" level="DEBUG">
+  	<!-- <appender-ref ref="ASYNC" /> -->
+    <appender-ref ref="STDOUT"/>
+  </logger>
+  <!--
+  <logger name="druid.sql.DataSource" level="DEBUG">
+  	<appender-ref ref="ASYNC" />  
+    <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="druid.sql.Connection" level="DEBUG">
+    <appender-ref ref="ASYNC" />  
+    <appender-ref ref="STDOUT"/>
+  </logger>
+
+  <logger name="druid.sql.ResultSet" level="DEBUG">
+  	<appender-ref ref="ASYNC" />  
+    <appender-ref ref="STDOUT"/>
+  </logger>
+   -->
+     
+  <logger name="com.yss.framework" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>  
+  <logger name="com.yss.mvc" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  <logger name="operLogger.DB" level="DEBUG">  
+        <appender-ref ref="ASYNC_DB" />  
+  </logger>
+  <Logger name="operLogger.FILE" level="DEBUG">
+      <appender-ref ref="ASYNC" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </Logger>
+  <logger name="com.yss.log" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  <logger name="com.yss.platform" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  <!-- 
+  <logger name="com.yss.platform.login" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger> 
+  <logger name="com.yss.platform.message" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.support" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.quick" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.resource" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.system" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.tools" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.workspace" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  <logger name="com.yss.platform.task" level="DEBUG">  
+        <appender-ref ref="ASYNC" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  -->
+ </configuration>

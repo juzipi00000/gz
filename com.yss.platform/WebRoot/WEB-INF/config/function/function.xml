@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<functions>
+    <function code="SYS" name="系统" parent="[root]" order="1" lever="PUB" type="MEU_SYS" cls="P_XT" compFile="" srcMark="S" params="" icoFile="SYS" desc="" ncheck="0" nrecycle="0" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="MGR" name="管理" parent="[root]" order="0" lever="PUB" type="MEU_SYS" cls="P_XT" compFile="" srcMark="S" params="" icoFile="MGR" desc="" ncheck="0" nrecycle="0" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="AppManage" name="应用系统管理" parent="MGR" order="2" lever="PUB" type="MEU_SYS" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="0" nrecycle="0" nuser="0" state="ENAB">
+        <fun-rights>SAVE,UPD,CHK,UCHK,RFH</fun-rights>
+    </function>
+    <function code="AuthorizeManage" name="顶岗管理" parent="SYS" order="5" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="AuthorizeManage" desc="" ncheck="1" nrecycle="1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights>
+    </function>
+    <function code="DbLinkCfg" name="数据库连接配置" parent="MGR" order="3" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="1" nrecycle="-1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights>
+    </function>
+    <!--  
+    <function code="MemoryManage" name="内存管理" parent="MGR" order="8" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="MemoryManage" desc="" ncheck="0" nrecycle="1" nuser="0" state="DISB">
+        <fun-rights>EPT,PNT</fun-rights>
+    </function>
+    -->
+    <function code="OnlineUser" name="在线用户" parent="SYS" order="7" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="OnlineUser" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights>DEL,PNT,EPT</fun-rights>
+    </function>
+    <function code="OperateLog" name="操作日志" parent="SYS" order="9" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="OperateLog" desc=" " ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <!-- <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights> edit by weijj 操作日志不需要这些按钮-->
+        <fun-rights>RFH,EPT,PNT</fun-rights>
+    </function>
+    <function code="Organization" name="组织架构" parent="SYS" order="1" lever="PUB" type="MEU_AID" cls="P_XT" compFile="null" srcMark="S" params="null" icoFile="Organization" desc="null" ncheck="1" nrecycle="1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights>
+    </function>
+    <function code="RightManage" name="权限管理" parent="SYS" order="4" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="RelaPost" desc="" ncheck="1" nrecycle="1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights>
+    </function>
+    <function code="RoleManage" name="岗位管理" parent="SYS" order="3" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="RoleManage" desc="" ncheck="1" nrecycle="1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights>
+    </function>
+    <function code="TempRelaApp" name="模板导出策略" parent="busTempMgr" order="5" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights>BRW,UPD,SAVE,PNT,EPT</fun-rights>
+    </function>
+    <function code="WorkSpaceAuthority" name="工作面板管理" parent="MGR" order="3" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="RoleManage" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights>UPD</fun-rights>
+    </function>
+    <function code="authorize" name="授权管理" parent="SYS" order="18" lever="PUB" type="MEU_SYS" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="1" nrecycle="0" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,RFH,PNT,EPT,DEL,CPY,CHK</fun-rights>
+    </function>
+    <function code="fun" name="功能管理" parent="SYS" order="8" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="fun" desc=" " ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights>ADD,UPD,SAVE,PNT,GRE,EPT,DEL,CPY</fun-rights>
+    </function>
+    <function code="templateManager" name="模板管理" parent="MGR" order="4" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights>ADD,UPD,SAVE,PNT,EPT,DEL,BRW</fun-rights>
+    </function>
+    <function code="usermanage" name="用户管理" parent="SYS" order="2" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="usermanage" desc="" ncheck="1" nrecycle="1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,SAVE,RFH,PNT,GRE,EPT,DEL,CPY</fun-rights>
+    </function>
+    <function code="workflowSet" name="业务导航管理" parent="MGR" order="15" lever="PUB" type="MEU_AID" cls="P_XT" compFile="" srcMark="S" params="" icoFile="workflowSet" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,EXE,DEL,CPY,CHK</fun-rights>
+    </function>
+    <!-- 添加调度方案设置 -->
+    <function code="dispatch" name="调度方案设置" parent="MGR" order="16" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="dispatch" desc="" ncheck="0" nrecycle="-1" nuser="0" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,DEL,CPY,CHK</fun-rights>
+    </function>
+    <!-- 添加调度方案处理 -->
+    <function code="dispatchExecute" name="调度方案处理" parent="MGR" order="17" lever="PUB" type="MEU_FUN" cls="D_RZ" compFile="" srcMark="S" params="" icoFile="dispatchExecute" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights>ADD,UPD,SAVE,EXE,CPY</fun-rights>
+    </function>
+    <!-- 业务日志查询 -->
+    <function code="runLogQuery" name="业务日志查询" parent="MGR" order="21" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="runLogQuery" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights>BRW</fun-rights>
+    </function>
+    <function code="RecycleBin" name="回收站" parent="SYS" order="10" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="RecycleBin" desc=" " ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="TaskManage" name="工作任务管理" parent="MGR" order="11" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="TaskManage" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="dictMgr" name="词汇字典管理" parent="MGR" order="1" lever="PUB" type="MEU_SYS" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="ServiceManage" name="服务管理" parent="MGR" order="10" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="ServiceManage" desc="" ncheck="0" nrecycle="0" nuser="0" state="DISB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="SecureManage" name="安全管理" parent="SYS" order="6" lever="PUB" type="CLS_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="SecureManage" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="RZ" name="日终处理" parent="SYS" order="17" lever="PUB" type="MOD_FUN" cls="D_RZ" compFile="" srcMark="S" params="" icoFile="RZ" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="busTempMgr" name="业务模板管理" parent="MGR" order="5" lever="PUB" type="CLS_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="0" nrecycle="-1" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="MessageBox" name="消息盒子" parent="MGR" order="16" lever="PUB" type="MEU_AID" cls="P_XT" compFile="" srcMark="S" params="" icoFile="MessageBox" desc="" ncheck="0" nrecycle="1" nuser="0" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="Remind" name="消息提醒策略管理" parent="MGR" order="18" lever="PUB" type="MEU_SYS" cls="P_XT" compFile="" srcMark="S" params="" icoFile="Remind" desc="" ncheck="0" nrecycle="0" nuser="0" state="ENAB">
+        <fun-rights>SAVE,UPD</fun-rights>
+    </function>
+    <function code="portfolio" name="组合基本参数" parent="portParam" order="4" lever="PUB" type="MEU_FUN" cls="P_YW" compFile="" srcMark="S" params="" icoFile="portfolio" desc=" " ncheck="1" nrecycle="1" nuser="1" state="ENAB">
+        <fun-rights>ADD,UPD,UCHK,SAVE,PNT,EPT,DEL,CPY,CHK,OK,CNL</fun-rights>
+    </function>
+     <function code="dbCheck" name="数据库检测" parent="MGR" order="8" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="dbCheck" desc=" " ncheck="0" nrecycle="0" nuser="0" state="ENAB">
+        <fun-rights>ADD,EXE</fun-rights>
+    </function>
+     <function code="dataCopy" name="数据复制" parent="MGR" order="19" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights>EXE</fun-rights>
+    </function>
+    <function code="downLog" name="日志下载" parent="SYS" order="16" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+    <function code="dbUpdateLog" name="数据库更新记录" parent="SYS" order="20" lever="PUB" type="MEU_FUN" cls="P_XT" compFile="" srcMark="S" params="" icoFile="" desc="" ncheck="-1" nrecycle="-1" nuser="-1" state="ENAB">
+        <fun-rights></fun-rights>
+    </function>
+</functions>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>PLATFORM</display-name>
+	<session-config>
+  		<session-timeout>60</session-timeout>
+ 	</session-config>
+	<context-param>  
+  		<param-name>logConfigLocation</param-name>  
+  		<param-value>WEB-INF/logConfig.xml</param-value>  
+	</context-param>
+	
+	<filter>
+        <filter-name>monitoring</filter-name>  
+        <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>  
+        <init-param>  
+            <param-name>log</param-name>  
+            <param-value>false</param-value>  
+        </init-param>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>monitoring</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+    <listener>  
+        <listener-class>net.bull.javamelody.SessionListener</listener-class>  
+    </listener>
+
+	<filter>
+    	<filter-name>DruidWebStatFilter</filter-name>
+    	<filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+    	<init-param>
+        	<param-name>exclusions</param-name>
+        	<param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,.jsp,.html,/druid/*,/monitoring/*</param-value>
+    	</init-param>
+  	</filter>
+  	<filter-mapping>
+    	<filter-name>DruidWebStatFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+  	
+  	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.yss.platform.login.LoginFilter</filter-class>
+		<init-param>  
+			<param-name>excludedPages</param-name>  
+			<param-value>/druid/*,/monitoring/*,.js,.gif,.jpg,.png,.css,.ico,.jsp,.html,.htm,.xml</param-value>  
+		</init-param>  
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>com.yss.framework.log.listener.LogConfiguratorListener</listener-class>
+	</listener>
+	
+	<servlet>  
+        <servlet-name>DruidStatView</servlet-name>  
+        <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>  
+    </servlet>  
+	<servlet-mapping>  
+        <servlet-name>DruidStatView</servlet-name>  
+        <url-pattern>/druid/*</url-pattern>  
+    </servlet-mapping>  
+	
+	<servlet>
+		<description>系统部署启动执行初始化</description>
+		<display-name>initServlet</display-name>
+		<servlet-name>initServlet</servlet-name>
+		<servlet-class>
+			com.yss.platform.init.PlatformInitServlet
+		</servlet-class>
+		<init-param>
+			<!-- 本地应用信息支持包，所有应用必须提供 -->
+			<param-name>appinfo</param-name>
+			<param-value>com.yss.platform.support.jar</param-value>
+		</init-param>
+		<init-param>
+			<!-- 功能列表加载器，加载当前应用的功能信息，所有应用必须提供，此处提供的是默认从配置文件中加载 -->
+			<param-name>funloadclass</param-name>
+			<param-value>com.yss.platform.support.init.FunctionLoader</param-value>
+		</init-param>
+		<init-param>
+			<param-name>TaskConfig</param-name>
+			<param-value>config/task/Task.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>TaskRegester</param-name>
+			<param-value>com.yss.platform.task.taskregister.Register</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<!-- 前后台交互servlet，所有应用必须配置 -->
+		<servlet-name>mvccomm</servlet-name>
+		<servlet-class>com.yss.mvc.servlet.CommonServlet</servlet-class>
+		<init-param>
+			<!-- 平台应用转发器，只有基础平台需要配置，其它应用不需要此项 -->
+			<param-name>dispatchclass</param-name>
+			<param-value>com.yss.platform.application.ApplicationDispatcher</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<!-- 数据服务servlet，所有应用必须配置 -->
+		<servlet-name>dataservice</servlet-name>
+		<servlet-class>com.yss.platform.servlet.DataServiceForPlatformServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<!-- 数据服务servlet，所有应用必须配置 -->
+		<servlet-name>baseoper</servlet-name>
+		<servlet-class>com.yss.busoper.servlet.BusOperServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>initServlet</servlet-name>
+		<url-pattern>/init</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>mvccomm</servlet-name>
+		<url-pattern>/comm</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 面板监听器 -->
+	<!-- 
+	<servlet>
+		<servlet-name>remindListener</servlet-name>
+		<servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>
+		<init-param>
+			<param-name>service-class</param-name>
+			<param-value>com.yss.platform.panel.listener.impl.RemindPanelListener</param-value>
+		</init-param>
+	</servlet>
+	 -->
+	<!-- 报表中心支持服务 -->
+	<servlet>
+		<servlet-name>reportserver</servlet-name>
+		<servlet-class>com.yss.report.integrate.servlet.ReportSupportServer</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>reportserver</servlet-name>
+		<url-pattern>/reportserver</url-pattern>
+	</servlet-mapping>
+	<!-- 
+	<servlet-mapping>
+		<servlet-name>remindListener</servlet-name>
+		<url-pattern>/hessian/remind</url-pattern>
+	</servlet-mapping>
+	 -->
+	<servlet>
+		<servlet-name>remoteservice</servlet-name>
+		<servlet-class>com.yss.platform.support.service.ServiceServlet</servlet-class>
+	</servlet>
+	
+	<!-- 用于其他应用导出文件 需拷贝至平台下  客户端只能访问平台-->
+	<servlet>
+		<servlet-name>copyFileServlet</servlet-name>
+		<servlet-class>com.yss.framework.copyfile.servlet.CopyFileServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>remoteservice</servlet-name>
+		<url-pattern>/service</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>dataservice</servlet-name>
+		<url-pattern>/dataservice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>baseoper</servlet-name>
+		<url-pattern>/baseoper</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>copyFileServlet</servlet-name>
+		<url-pattern>/copyFileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>com.yss.platform.login.LoginAdminServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<!-- Orlando 20150929 以下节点是用于干扰AppScan扫描报告错误 -->
+	<security-constraint>  
+		<web-resource-collection>
+			<web-resource-name></web-resource-name> 
+			<url-pattern>/*</url-pattern> 
+	   		<http-method>PUT</http-method>  
+	 		<http-method>DELETE</http-method>  
+	 		<http-method>HEAD</http-method>  
+	 		<http-method>OPTIONS</http-method>  
+	 		<http-method>TRACE</http-method>
+	  	</web-resource-collection>
+	  	<auth-constraint>  
+	  	</auth-constraint>  
+	</security-constraint>  
+	<login-config>  
+	  	<auth-method>BASIC</auth-method>  
+	</login-config>
+	<!-- Orlando 20150929 以上节点是用于干扰AppScan扫描报告错误 -->
+	
+</web-app>

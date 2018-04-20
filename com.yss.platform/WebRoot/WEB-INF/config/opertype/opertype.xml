@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 公共方法Opertype与系统字典表中的DV_TYPE的对照表 -->
+<opers>
+	<oper typeCode="add" typeName="ADD" typeDesc="新增"/>
+	<oper typeCode="edit" typeName="UPD" typeDesc="修改"/>
+	<oper typeCode="del" typeName="DEL" typeDesc="删除"/>
+	<oper typeCode="audit" typeName="CHK" typeDesc="审核"/>
+	<oper typeCode="unaudit" typeName="UCHK" typeDesc="反审核"/>
+	<oper typeCode="clear" typeName="CLR" typeDesc="清除 "/>
+	<oper typeCode="restore" typeName="RCR" typeDesc="恢复 "/>
+	<oper typeCode="getViewData" typeName="BRW" typeDesc="查询 "/>
+	<oper typeCode="getSpecValue" typeName="BRW" typeDesc="查询 "/>
+	<oper typeCode="exe" typeName="EXE" typeDesc="执行"/>
+	<oper typeCode="gre" typeName="GRE" typeDesc="生成"/>
+	<oper typeCode="loginOn" typeName="LOGIN_ON" typeDesc="登陆"/>
+	<oper typeCode="loginOff" typeName="LOGIN_OFF" typeDesc="登出"/>	
+</opers>

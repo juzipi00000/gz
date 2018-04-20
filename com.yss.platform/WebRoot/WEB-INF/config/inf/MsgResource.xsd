@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ysstech.com" xmlns:msg="http://www.ysstech.com"
+	xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<element name="messages">
+		<complexType>
+			<sequence>
+				<element ref="msg:sysMessages" minOccurs="1" maxOccurs="1"></element>
+				<element ref="msg:extMessages" minOccurs="1" maxOccurs="1"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="sysMessages"></element>
+	
+	<element name="extMessages">
+		<complexType>
+			<sequence>
+				<element ref="msg:module" minOccurs="1" maxOccurs="unbounded"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="module">
+		<complexType>
+			<sequence>
+				<element ref="msg:message" minOccurs="0" maxOccurs="unbounded"></element>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+		</complexType>
+	</element>
+	
+	<element name="message">
+		<complexType>
+			<sequence>
+				<element ref="msg:content" minOccurs="1" maxOccurs="1"></element>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="code" type="string"/>
+			<attribute name="formType" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="content" type="string"></element>
+</schema>

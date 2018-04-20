@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ysstech.com" xmlns:ext="http://www.ysstech.com"
+	xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<element name="configs">
+		<complexType>
+			<sequence>
+				<element ref="ext:messageConfig" minOccurs="1" maxOccurs="1"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="messageConfig">
+		<complexType>
+			<sequence>
+				<element ref="ext:module" minOccurs="1" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="module">
+		<complexType>
+			<sequence>
+				<element ref="ext:infos" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:hints" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:warns" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:errors" minOccurs="1" maxOccurs="1"/>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="code" type="string" use="required"/>
+			<attribute name="desc" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="infos">
+		<complexType>
+			<sequence>
+				<element ref="ext:info" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="hints">
+		<complexType>
+			<sequence>
+				<element ref="ext:hint" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="warns">
+		<complexType>
+			<sequence>
+				<element ref="ext:warn" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="errors">
+		<complexType>
+			<sequence>
+				<element ref="ext:error" minOccurs="0" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="info">
+		<complexType>
+			<sequence>
+				<element ref="ext:message" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:solution" minOccurs="1" maxOccurs="1"/>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="terminalType" type="string" default="CL"/>
+			<attribute name="mes" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="hint">
+		<complexType>
+			<sequence>
+				<element ref="ext:message" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:solution" minOccurs="1" maxOccurs="1"/>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="terminalType" type="string" default="CL"/>
+			<attribute name="mes" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="warn">
+		<complexType>
+			<sequence>
+				<element ref="ext:message" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:solution" minOccurs="1" maxOccurs="1"/>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="terminalType" type="string" default="CL"/>
+			<attribute name="mes" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="error">
+		<complexType>
+			<sequence>
+				<element ref="ext:message" minOccurs="1" maxOccurs="1"/>
+				<element ref="ext:solution" minOccurs="1" maxOccurs="1"/>
+			</sequence>
+			<attribute name="id" type="string" use="required"/>
+			<attribute name="terminalType" type="string" default="CL"/>
+			<attribute name="mes" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="message">
+		<complexType>
+			<attribute name="id" type="string"/>
+			<attribute name="detailId" type="string"/>
+			<attribute name="operType" type="string"/>
+		</complexType>
+	</element>
+	
+	<element name="solution">
+		<complexType>
+			<attribute name="id" type="string"/>
+		</complexType>
+	</element>
+</schema>

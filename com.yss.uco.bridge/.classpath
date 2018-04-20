@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.eclipse.equinox.servletbridge_1.2.300.v20130508-1243.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/eclipse/plugins/javax.servlet_3.0.0.v201112011016.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javamelody.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jrobin-1.5.9.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/com.yss.ams.bridge.support.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

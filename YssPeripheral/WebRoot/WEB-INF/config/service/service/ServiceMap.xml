@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+	<!-- 总分对账 -->
+	<class id="IZfdzService" menuId="zfdz"
+		interface="com.yss.elecreco.zwhd.zfdz.service.IZfdzService" class="com.yss.elecreco.zwhd.zfdz.service.impl.ZfdzService" />
+	<!-- 转换字典 -->
+	<class id="IZhzdService" menuId="zhzd"
+		interface="com.yss.elecreco.oraclezz.zhzd.service.IZhzdService" class="com.yss.elecreco.oraclezz.zhzd.service.impl.ZhzdService" />
+	<class id="IZhzdDataService" menuId="zhzd"
+		interface="dataservice.IZhzdDataService" class="com.yss.elecreco.oraclezz.zhzd.service.impl.ZhzdDataService" />
+	<class id="IZdOrgService" menuId="zdorg"
+		interface="com.yss.elecreco.oraclezz.zdorg.service.IZdOrgService" class="com.yss.elecreco.oraclezz.zdorg.service.impl.ZdOrgService" />
+	<class id="IZzywglService" menuId="zzywgl"
+		interface="com.yss.elecreco.oraclezz.zzywgl.service.IZzywglService" class="com.yss.elecreco.oraclezz.zzywgl.service.impl.ZzywglService" />
+
+	<!-- 对账设置start -->
+	<class id="IKMXService" menuId="AccSubjectX"
+		class="com.yss.fina.sc.kmx.service.impl.KMXService" interface="com.yss.fina.sc.kmx.service.IKMXService"/>
+	<class id="IKmxPlanService" menuId="AccSubjectX_A"
+		class="com.yss.fina.sc.kmxplan.service.impl.KmxPlanService" interface="com.yss.fina.sc.kmxplan.service.IKmxPlanService" />
+	<class id="IKMChkMapService" menuId="AccSubjectX_MAP"
+		class="com.yss.fina.sc.kmchkmap.service.impl.KMChkMapService" interface="com.yss.fina.sc.kmchkmap.service.IKMChkMapService"></class>
+	<!-- 对账设置end -->
+	
+	<!-- start 科目核对结果  -->
+	<class id="IKmChkResService" menuId="AccSubjectXRes"
+		class="com.yss.fina.sc.kmchkres.service.impl.KmChkResService"
+		interface="com.yss.fina.sc.kmchkres.service.IKmChkResService"></class>
+	<class id="IKmChkAffirmService" menuId="AccSubjectXAffirm"
+		class="com.yss.fina.sc.kmchkaffirm.service.impl.KmChkAffirmService"
+		interface="kmchkaffirm.service.IKmChkAffirmService"></class>
+	<!--  end 科目核对结果  -->
+	
+	<class id="IKMChkService" menuId="AccSubjectX_CHK"
+		class="com.yss.fina.sc.kmchk.service.impl.KMChkService" interface="kmchk.service.IKMChkService" />
+
+	<!-- Kettle导出接口 -->
+	<class id="IKettleGroupService" menuId="kettleGroup" class="com.yss.kettle.kettlegroup.service.impl.KettleGroupService" interface="com.yss.kettle.kettlegroup.service.IKettleGroupService"></class>
+	<class id="IKettleGroupDataService" menuId="kettleGroup" class="com.yss.kettle.kettlegroup.service.impl.KettleGroupDataService" interface="com.yss.kettle.kettlegroup.service.IKettleGroupDataService"></class>
+	<class id="IKettleDataService" menuId="kettle" class="com.yss.kettle.KettleDataService" interface="kettle.service.IKettleDataService" />
+	
+	<class id="IKettleRelaService" menuId="kettleRela" class="com.yss.kettle.kettlerela.service.KettleRelaService" interface="com.yss.kettle.kettlerela.IKettleRelaService"></class>
+	<class id="IKettleExecuteService" menuId="kettleExecute" class="com.yss.kettle.kettleExecute.service.impl.KettleExecuteService" interface="com.yss.kettle.kettleExecute.service.IKettleExecuteService"></class>
+	<class id="IKmMapingService" menuId="KmMaping" class="com.yss.elecreco.kmmaping.service.impl.KmMapingService" interface="com.yss.elecreco.kmmaping.service.IKmMapingService" />
+	<class id="IZhzdDataService" menuId="ZhzdDataService" class="com.yss.elecreco.oraclezz.zhzd.service.impl.ZhzdDataService" interface="dataservice.IZhzdDataService" />
+</classes>

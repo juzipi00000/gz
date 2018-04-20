@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--用于配置消息设置中的操作参数-->
+<operations>
+	<operate id="0" code="brow" caption="浏览"/>
+	<operate id="1" code="add" caption="新增"/>
+	<operate id="2" code="edit" caption="修改"/>
+	<operate id="3" code="copy" caption="复制"/>
+	<operate id="4" code="del" caption="删除"/>
+	<operate id="5" code="audit" caption="审核"/>
+	<operate id="6" code="unaudit" caption="反审核"/>
+	<operate id="7" code="filter" caption="筛选"/>
+	<operate id="8" code="init" caption="初始化"/>
+	<operate id="9" code="save" caption="保存"/>
+	<operate id="10" code="recall" caption="撤销"/>
+	<operate id="11" code="clear" caption="清除"/>
+	<operate id="12" code="query" caption="查询"/>
+	<operate id="13" code="restore" caption="恢复"/>
+	<operate id="14" code="loginOn" caption="登陆"/>
+	<operate id="15" code="loginOff" caption="登出"/>
+	<!-- 用于电子对账 -->
+	<operate id="16" code="send" caption="发送"/>
+	<operate id="17" code="enable" caption="启用"/>
+	<operate id="18" code="disenable" caption="停用"/>
+	<!-- 产品参数信息 -->
+	<operate id="19" code="spqr" caption="审批确认"/>
+	<operate id="20" code="cxspqr" caption="撤销审批"/>
+	<operate id="21" code="xsqr" caption="销售确认"/>
+	<operate id="22" code="cxxsqr" caption="撤销销售"/>
+	<operate id="23" code="qxqr" caption="起息确认"/>
+	<operate id="24" code="cxqxqr" caption="撤销起息"/>
+	<operate id="25" code="dqqr" caption="到期确认"/>
+	<operate id="26" code="cxdqqr" caption="撤销到期"/>
+	<operate id="27" code="qsqr" caption="清算确认"/>
+	<operate id="28" code="cxqsqr" caption="撤销清算"/>
+	<operate id="29" code="unrela" caption="解除关联"/>
+</operations>

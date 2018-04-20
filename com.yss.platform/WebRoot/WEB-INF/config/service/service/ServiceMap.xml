@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+	<!--
+	<class id="ITaskDescService" menuId="Task" interface="com.yss.platform.task.taskdesc.service.ITaskDescService" class="com.yss.platform.task.taskdesc.service.impl.TaskDescService"></class>
+	<class id="IJobDescService" menuId="Job" interface="com.yss.platform.task.job.service.IJobDescService" class="com.yss.platform.task.job.service.impl.JobDescService"></class>
+	-->
+	<!-- 任务管理 -->
+	<!-- <class id="ITaskService" menuId="TaskManage" interface="com.yss.platform.support.task.workflow.service.ITaskService" class="com.yss.platform.task.workflow.service.TaskService"/> -->
+	<!-- class id="IDispatchManagerService" menuId="dispatch" interface="com.yss.platform.support.schedulingscheme.service.IDispatchManagerService" class="com.yss.platform.schedulingscheme.service.impl.DispatchManagerService"></class-->
+	<class id="IPromptInfoService" interface="com.yss.platform.showinfo.service.IPromptInfoService"
+	    menuId=""
+		class="com.yss.platform.showinfo.service.impl.PromptInfoService"></class>
+	
+	<class id="ISqlMgrService" interface="com.yss.platform.system.sqlMgr.service.ISqlMgrService"
+	    menuId="sqlMgr"
+		class="com.yss.platform.system.sqlMgr.service.impl.SqlMgrService"></class>
+	<class id="IBizControlService" interface="com.yss.framework.api.busoperservice.IBizControlService"
+		menuId="" class="com.yss.busoper.service.impl.DayfBizControlService"></class>	
+	<!-- 审核状态 -->
+	<class id="ICheckStateDataService"
+		interface="com.yss.platform.support.dataservice.service.ICheckStateDataService"
+		menuId=""
+		class="com.yss.platform.dataservice.checkstate.service.impl.CheckStateDataService" />
+	<!-- 系统常量 -->
+	<class id="ISysConstDataService"
+		interface="com.yss.platform.support.dataservice.service.ISysConstDataService"
+		menuId=""
+		class="com.yss.platform.dataservice.sysconst.service.impl.SysConstDataService" />
+
+	<class id="IAppSupportService"
+		interface="com.yss.platform.support.application.mgr.service.IAppSupportService"
+		menuId="AppManage"
+		class="com.yss.platform.application.mgr.service.impl.ApplicationService" />
+	<!--
+		<class id="IAccProService" menuId="accPro"
+		class="com.yss.platform.dict.accpro.service.impl.AccProService"
+		interface="com.yss.platform.dict.accpro.service.IAccProService" />
+
+		<class id="IAccProDataService" menuId="accPro"
+		class="com.yss.platform.dict.accpro.service.impl.AccProDataService"
+		interface="com.yss.platform.support.dataservice.service.IAccProDataService"
+		/>
+	-->
+	<!-- 产品状态设置 start-->
+	<class id="ISwitchProductStateService" menuId="prodState"
+		class="com.yss.platform.system.productState.service.impl.SwitchProductStateService"
+		interface="com.yss.platform.system.productState.service.ISwitchProductStateService" />
+	<class id="ISafeSystemDataService" menuId="syssecure"
+		class="com.yss.platform.system.safesys.service.impl.SafeSysDataService"
+		interface="com.yss.platform.support.dataservice.service.ISafeSystemDataService" />
+	<!--  end -->
+	<class id="IPwdHistService"
+		interface="com.yss.platform.system.pwdhist.service.IPwdHistService"
+		menuId="" class="com.yss.platform.system.pwdhist.service.impl.PwdHistService" />
+	<class id="ISysWordDataService" menuId="sysword"
+		class="com.yss.platform.dict.sysword.service.impl.SysWordDataService"
+		interface="com.yss.platform.support.dataservice.service.ISysWordDataService" />
+
+	<!--
+		<class id="IDaeElemDataService" menuId="DaeElem"
+		class="com.yss.platform.dict.accele.service.impl.DaeElemDataService"
+		interface="com.yss.platform.support.dataservice.service.IDaeElemDataService"
+		/>
+	-->
+
+	<class id="IPwdAdminService"
+		interface="com.yss.platform.quick.pwdadm.service.IPwdAdminService"
+		menuId="" class="com.yss.platform.quick.pwdadm.service.impl.PwdAdminService" />
+
+	<class id="IOnLineUserService"
+		interface="com.yss.platform.resource.onlineuser.service.IOnLineUserService"
+		menuId="OnlineUser"
+		class="com.yss.platform.resource.onlineuser.service.impl.OnLineUserService" />
+	<class id="IFunDataService" interface="com.yss.framework.api.dataservice.IFunDataService"
+		menuId="fun" class="com.yss.platform.resource.sysfun.service.impl.FunDataService" />
+	<class id="ISysFunService"
+		interface="com.yss.platform.resource.sysfun.service.ISysFunService"
+		menuId="fun" class="com.yss.platform.resource.sysfun.service.impl.SysFunService" />
+  <class id="IRelevancyFunService"
+		interface="com.yss.platform.resource.sysfun.service.IRelevancyFunService"
+		menuId="RelevancyFun" class="com.yss.platform.resource.sysfun.service.impl.RelevancyFunService" />
+	<class id="ITemplateService"
+		interface="com.yss.platform.support.resource.template.ITemplateService"
+		menuId="templateManager"
+		class="com.yss.platform.resource.template.service.impl.TemplateService" />
+	<class id="ITemplateDataService"
+		interface="com.yss.platform.support.dataservice.service.ITemplateDataService"
+		menuId="templateManager"
+		class="com.yss.platform.resource.template.service.impl.TemplateDataService" />
+	<class id="IRemindPanelService"
+		interface="com.yss.platform.support.workspace.panel.service.IRemindPanelService"
+		menuId="remindPolicy"
+		class="com.yss.platform.workspace.panel.service.impl.RemindPanelService" />
+	<class id="ILicenseService"
+		interface="com.yss.platform.system.license.service.ILicenseService"
+		menuId="" class="com.yss.platform.system.license.service.impl.LicenseService" />
+
+	<class id="IOperLogService"
+		interface="com.yss.platform.system.operLog.service.IOperLogService"
+		menuId="OperateLog" class="com.yss.platform.system.operLog.service.impl.OperLogService" />
+	<class id="IOperLogDataService"
+		interface="com.yss.platform.support.log.operlog.IOperLogDataService"
+		menuId="OperateLog"
+		class="com.yss.platform.system.operLog.service.impl.OperLogDataService" />
+	<class id="IOperLogNew" menuId="OperateLogNew"
+		interface="com.yss.framework.log.IOperLogNew"
+		class="com.yss.platform.system.operLog.service.impl.OperLogNewService" />
+
+	<class id="IDbLinkDataService"
+		interface="com.yss.platform.support.dataservice.service.IDbLinkDataService"
+		menuId="DbLinkCfg"
+		class="com.yss.platform.resource.dblink.service.impl.DbLinkDataService" />
+	<class id="IDbLinkService"
+		interface="com.yss.platform.support.dblink.service.IDbLinkService"
+		menuId="DbLinkCfg" class="com.yss.platform.resource.dblink.service.impl.DbLinkService" />
+
+	<!-- 岗位管理 -->
+	<class id="IOperService" interface="com.yss.platform.system.oper.service.IOperService"
+		menuId="Oper" class="com.yss.platform.system.oper.service.impl.OperService" />
+	<class id="IOperRelaService"
+		interface="com.yss.platform.system.operrela.service.IOperRelaService"
+		menuId="RelaOper" class="com.yss.platform.system.operrela.service.impl.OperRelaService" />
+	<class id="IRightPortService"
+		interface="com.yss.platform.system.port.service.IRightPortService"
+		menuId="" class="com.yss.platform.system.port.service.impl.PortService" />
+	<class id="IPostDataService"
+		interface="com.yss.platform.support.dataservice.service.IPostDataService"
+		menuId="Post" class="com.yss.platform.system.post.service.impl.PostDataService" />
+	<class id="IPostRelaUserService"
+		interface="com.yss.platform.system.post.service.IPostRelaUserService"
+		menuId="PostRelaUser" class="com.yss.platform.system.post.service.impl.PostRelaUserService" />
+	<class id="IPostService" interface="com.yss.platform.system.post.service.IPostService"
+		menuId="Post" class="com.yss.platform.system.post.service.impl.PostService" />
+	<class id="IPostRelaService"
+		interface="com.yss.platform.system.postrela.service.IPostRelaService"
+		menuId="RelaPost" class="com.yss.platform.system.postrela.service.impl.PostRelaService" />
+
+	<!-- 权限服务 -->
+	<class id="IAuthBailService"
+		interface="com.yss.platform.system.authbail.service.IAuthBailService"
+		menuId="AuthorizeManage" class="com.yss.platform.system.authbail.service.impl.AuthBailService" />
+	<class id="IAuthorityService"
+		interface="com.yss.platform.system.authority.service.IAuthorityService"
+		menuId="Authority"
+		class="com.yss.platform.system.authority.service.impl.AuthorityService" />
+	<class id="IAuthorizeManageService"
+		interface="com.yss.platform.system.rightmanage.service.IAuthorizeManageService"
+		menuId="authorize"
+		class="com.yss.platform.system.rightmanage.service.impl.AuthorizeManageService" />
+	<class id="IRightRrowsService"
+		interface="com.yss.platform.system.rightmanage.service.IRightRrowsService"
+		menuId="RightManage"
+		class="com.yss.platform.system.rightmanage.service.impl.RightBrowsService" />
+	<class id="IRightManageDataService"
+		interface="com.yss.platform.support.dataservice.service.IRightManageDataService"
+		menuId="RightManage"
+		class="com.yss.platform.system.rightmanage.service.impl.RightManageDataService" />
+	<class id="IRightManageService"
+		interface="com.yss.platform.system.rightmanage.service.IRightManageService"
+		menuId="RightManage"
+		class="com.yss.platform.system.rightmanage.service.impl.RightManageService" />
+	<class id="IRoleService" interface="com.yss.platform.system.role.service.IRoleService"
+		menuId="Role" class="com.yss.platform.system.role.service.impl.RoleService" />
+	<class id="IRoleRelaService"
+		interface="com.yss.platform.system.rolerela.service.IRoleRelaService"
+		menuId="RoleManage" class="com.yss.platform.system.rolerela.service.impl.RoleRelaService" />
+
+	<!-- 系统和数据安全服务 -->
+	<class id="ISafeDataDataService" interface="com.yss.framework.api.common.pi.ISafeDataDataService"
+		menuId="datasafe"
+		class="com.yss.platform.system.safedata.service.impl.SafeDataDataService" />
+	<class id="ISafeDataService"
+		interface="com.yss.platform.system.safedata.service.ISafeDataService"
+		menuId="datasafe" class="com.yss.platform.system.safedata.service.impl.SafeDataService" />
+	<class id="ISafeSystemDataService"
+		interface="com.yss.platform.support.dataservice.service.ISafeSystemDataService"
+		menuId="syssecure"
+		class="com.yss.platform.system.safesys.service.impl.SafeSysDataService" />
+	<class id="ISafeSysService"
+		interface="com.yss.platform.system.safesys.service.ISafeSysService"
+		menuId="syssecure" class="com.yss.platform.system.safesys.service.SafeSysService" />
+	<class id="IVocDataService"
+		interface="com.yss.platform.support.dataservice.service.IVocDataService"
+		menuId="pubvocabulary" class="com.yss.platform.dict.vocabulary.service.impl.VocDataService" />
+	<class id="IVocabularyService"
+		interface="com.yss.platform.dict.vocabulary.service.IVocabularyService"
+		menuId="pubvocabulary"
+		class="com.yss.platform.dict.vocabulary.service.impl.VocabularyService" />
+
+	<class id="IPortService" menuId="portfolio"
+		class="com.yss.platform.system.port.service.impl.PortService"
+		interface="com.yss.right.service.IPortService" />
+
+	<class id="IPortDataService"
+		interface="com.yss.platform.support.dataservice.service.IPortDataService"
+		menuId="portfolio" class="com.yss.platform.system.port.service.impl.PortDataService" />
+	
+	<class id="IPortBDataService"
+		interface="com.yss.platform.support.dataservice.service.IPortBDataService"
+		menuId="portfolio" class="com.yss.platform.system.port.service.impl.PortBDataService" />
+	
+	<!-- add by zhaoxianlin 20130626 start -->
+	<class id="ILoginDataService"
+		interface="com.yss.platform.support.dataservice.service.ILoginDataService"
+		menuId="" class="com.yss.platform.login.LoginAdmin" />
+	<!-- add by zhaoxianlin 20130626 end -->
+	<!-- 用户服务 -->
+	<class id="ICorpOrgService"
+		interface="com.yss.platform.system.corporg.service.ICorpOrgService"
+		menuId="Organization" class="com.yss.platform.system.corporg.service.impl.CorpOrgService" />
+	<class id="ICorpDataService"
+		interface="com.yss.platform.support.dataservice.service.ICorpDataService"
+		menuId="Organization" class="com.yss.platform.system.corporg.service.impl.CorpDataService" />
+
+	<class id="IUserDataService" interface="com.yss.framework.api.dataservice.IUserDataService"
+		menuId="usermanage" class="com.yss.platform.system.user.service.impl.UserDataService" />
+	<class id="IUserService" interface="com.yss.platform.system.user.service.IUserService"
+		menuId="usermanage" class="com.yss.platform.system.user.service.impl.UserService" />
+
+	<!-- 工作台服务 -->
+	<class id="IRemindPanelService"
+		interface="com.yss.platform.support.workspace.panel.service.IRemindPanelService"
+		menuId="remindPolicy"
+		class="com.yss.platform.workspace.panel.service.impl.RemindPanelService" />
+	<class id="IWorkSpaceService" interface="com.yss.platform.workspace.service.IWorkSpaceService"
+		menuId="WorkSpace" class="com.yss.platform.workspace.service.impl.WorkSpaceService" />
+	<class id="IWorkSpaceAuthorityService"
+		interface="com.yss.platform.workspaceauthority.service.IWorkSpaceAuthorityService"
+		menuId="WorkSpaceAuthority"
+		class="com.yss.platform.workspaceauthority.service.impl.WorkSpaceAuthorityService" />
+	<class id="IWorkSpaceSelfManagerService"
+		interface="com.yss.platform.workspaceselfmanager.service.IWorkSpaceSelfManagerService"
+		menuId="WorkSpaceSelfManager"
+		class="com.yss.platform.workspaceselfmanager.service.impl.WorkSpaceSelfManagerService" />
+
+
+	<!-- 字典管理相关 -->
+	<class id="IVocabularyDiService"
+		interface="com.yss.platform.system.vocabularydi.service.IVocabularyDiService"
+		menuId="pubvocabularyquy"
+		class="com.yss.platform.system.vocabularydi.service.impl.VocabularyDiService" />
+	<!-- 	<class id="IDcCuryQuyService" -->
+	<!--
+		interface="com.yss.platform.dict.dccury.service.IDcCuryQuyService"
+	-->
+	<!--
+		menuId="currencyquy"
+		class="com.yss.platform.dict.dccury.service.impl.DcCuryService" />
+	-->
+	<!--
+		<class id="IAccTypeService"
+		interface="com.yss.platform.dict.acctype.service.IAccTypeService"
+		menuId="acctypequy"
+		class="com.yss.platform.dict.acctype.service.impl.AccTypeService" />
+
+		<class id="IAccTypeDataService" menuId="accType"
+		class="com.yss.platform.dict.acctype.service.impl.AccTypeDataService"
+		interface="com.yss.platform.support.dataservice.service.IAccTypeDataService"
+		/>
+	-->
+	<!-- 	<class id="IDttdModeService" -->
+	<!--
+		interface="com.yss.platform.dict.dttdmode.service.IDttdModeService"
+	-->
+	<!--
+		menuId="dttdmodequy"
+		class="com.yss.platform.dict.dttdmode.service.impl.DttdModeService" />
+	-->
+	<!-- 	<class id="IDtTdModeDataService" menuId="dttdmode" -->
+	<!--
+		class="com.yss.platform.dict.dttdmode.service.impl.DtTdModeDataService"
+	-->
+	<!--
+		interface="com.yss.platform.support.dataservice.service.IDtTdModeDataService"
+		/>
+	-->
+	<!-- 	<class id="IDtatdAttrService" -->
+	<!--
+		interface="com.yss.platform.dict.dtatdattr.service.IDtatdAttrService"
+	-->
+	<!--
+		menuId="dtatdattrquy"
+		class="com.yss.platform.dict.dtatdattr.service.impl.DtatdAttrService"
+		/>
+	-->
+	<!-- 	<class id="IDtaTdAttrDataService" menuId="dtatdattrquy" -->
+	<!--
+		class="com.yss.platform.dict.dtatdattr.service.impl.DtaTdAttrDataService"
+	-->
+	<!--
+		interface="com.yss.platform.support.dataservice.service.IDtaTdAttrDataService"
+		/>
+	-->
+	<!--
+		<class id="IEDaiDictService"
+		interface="com.yss.platform.dict.dai.service.IEDaiDictService"
+		menuId="daidictquy"
+		class="com.yss.platform.dict.dai.service.impl.DaiDictService" />
+		<class id="IAccEleService"
+		interface="com.yss.platform.dict.accele.service.IAccEleService"
+		menuId="accelequy"
+		class="com.yss.platform.dict.accele.service.impl.AccEleService" />
+	-->
+	<!-- 	<class id="IFeeRelateService" -->
+	<!--
+		interface="com.yss.platform.dict.feerelate.service.IFeeRelateService"
+	-->
+	<!--
+		menuId="feerelatequy"
+		class="com.yss.platform.dict.feerelate.service.impl.FeeRelateService"
+		/>
+	-->
+	<!--
+		<class id="IDvaItemService"
+		interface="com.yss.platform.dict.dvaitem.service.IDvaItemService"
+	-->
+	<!--
+		menuId="dvaitemquy"
+		class="com.yss.platform.dict.dvaitem.service.impl.DvaItemService" />
+	-->
+	<!--
+		<class id="IDeExpService"
+		interface="com.yss.platform.dict.deexp.service.IDeExpService"
+	-->
+	<!--
+		menuId="deexpquy"
+		class="com.yss.platform.dict.deexp.service.impl.DeExpService" />
+	-->
+	<!--
+		<class id="IFinItemService"
+		interface="com.yss.platform.dict.finitem.service.IFinItemService"
+	-->
+	<!--
+		menuId="finitemquy"
+		class="com.yss.platform.dict.finitem.service.impl.FinItemService" />
+	-->
+	<!--
+		<class id="IIeItemService"
+		interface="com.yss.platform.dict.ieitem.service.IIeItemService"
+	-->
+	<!--
+		menuId="ieitemquy"
+		class="com.yss.platform.dict.ieitem.service.impl.IeItemService" />
+	-->
+	<!-- 	<class id="IDvaItemDataService" menuId="dvaitemquy" -->
+	<!--
+		class="com.yss.platform.dict.dvaitem.service.impl.DvaItemDataService"
+	-->
+	<!--
+		interface="com.yss.platform.support.dataservice.service.IDvaItemDataService"
+		/>
+	-->
+	<!-- 	<class id="IIeItemDataService" menuId="ieitemquy" -->
+	<!--
+		class="com.yss.platform.dict.ieitem.service.impl.IeItemDataService"
+	-->
+	<!--
+		interface="com.yss.platform.support.dataservice.service.IIeItemDataService"
+		/>
+	-->
+	<!-- 划款类型字典接口-->
+	<!--
+		<class id="IHkTypeDataService" menuId="hkcode"
+		class="com.yss.platform.dict.hktype.service.impl.HkTypeDataService"
+		interface="com.yss.platform.support.dataservice.service.IHkTypeDataService"
+		/>
+	-->
+	<!-- 对账类型字典接口-->
+	<!--
+		<class id="IDzTypeDataService" menuId="dzcode"
+		interface="com.yss.platform.support.dataservice.service.IDzTypeDataService"
+		class="com.yss.platform.dict.dztype.service.impl.DzTypeDataService" />
+	-->
+	<!-- 收支项目字典接口 -->
+	<!-- 	<class id="IIeItemService" menuId="ieitemquy" -->
+	<!--
+		class="com.yss.platform.dict.ieitem.service.impl.IeItemService"
+	-->
+	<!--
+		interface="com.yss.platform.dict.ieitem.service.IIeItemService" />
+	-->
+
+	<!--
+		<class id="IRemoteServiceTest" menuId=""
+		class="com.yss.platform.RemoteServiceTest"></class>
+	-->
+	<!-- 版本信息 -->
+	<class id="IVersionManageService"
+		interface="com.yss.platform.system.version.service.IVersionManageService"
+		menuId=""
+		class="com.yss.platform.system.version.service.impl.VersionManageService"></class>
+	<!-- 连接测试接口 -->
+	<class id="IConnectTest" menuId=""
+		interface="com.yss.platform.system.connecttest.service.IConnectTest"
+		class="com.yss.platform.system.connecttest.service.impl.ConnectTest"></class>
+
+	<!-- 数据服务接口 -->
+	<!-- 	<class id="IDCDataService" -->
+	<!--
+		interface="com.yss.platform.support.dataservice.service.IDCDataService"
+	-->
+	<!--
+		menuId="currency"
+		class="com.yss.platform.dict.dccury.service.impl.DCDataService"></class>
+	-->
+
+	<!-- 	<class id="IDvaItemDataService" -->
+	<!--
+		interface="com.yss.platform.support.dataservice.service.IDvaItemDataService"
+	-->
+	<!--
+		menuId="dvaitem"
+		class="com.yss.platform.dict.dvaitem.service.impl.DvaItemDataService"
+		/>
+	-->
+	<class id="ILogger" interface="com.yss.framework.api.busoperservice.ILogger"
+		menuId="cacheSender" class="com.yss.busoper.status.runlog.BusLogger" />
+
+	<class id="IFtpCfgDataService"
+		interface="com.yss.platform.support.dataservice.service.IFtpCfgDataService"
+		menuId="FtpCfg" class="com.yss.platform.resource.ftp.service.impl.FtpCfgDataService"></class>
+	<class id="IBusiOperLogger" interface="com.yss.busoper.status.IBusiOperLogger"
+		class="com.yss.busoper.status.runlog.BusiOperLogger" />
+	<!-- START 数据库检测 -->
+	<class id="IGetLeftDataDbService" menuId=""
+		class="com.yss.platform.system.dbcheck.service.impl.GetLeftDataDbService"
+		interface="com.yss.platform.system.dbcheck.service.IGetLeftDataDbService" />
+	<class id="IDbCheckService" menuId="dbCheck"
+		class="com.yss.platform.system.dbcheck.service.impl.DbCheckService"
+		interface="com.yss.platform.system.dbcheck.service.IDbCheckService" />
+	<class id="IWorkFlowLoadService"
+		interface="com.yss.platform.workspace.service.IWorkFlowLoadService"
+		menuId="workflowSet" class="com.yss.platform.workspace.service.impl.WorkFlowLoadService" />
+	<class id="IDownLogService"
+		interface="com.yss.platform.system.downLog.service.IDownLogService"
+		menuId="downLog" class="com.yss.platform.system.downLog.service.impl.DownLogService" />
+	<!-- END 数据库检测 -->
+
+
+	<!-- 报表管理 -->
+	<class id="IReportDataService" menuId="BB" interface="com.yss.report.integrate.report.service.IReportDataService" class="com.yss.report.integrate.report.service.impl.ReportDataService" />
+  	<class id="IReportService" menuId="BB" interface="com.yss.report.integrate.report.service.IReportService" class="com.yss.report.integrate.report.service.impl.ReportService" />
+ 	
+	<!-- <class id="IDataCopyService" menuId="dataCopy"
+		class="com.yss.platform.system.dataCopy.service.impl.DataCopyService" /> -->
+	<!-- <class id="IRightManageCopyService" menuId="RightManage"
+		class="com.yss.platform.system.rightmanage.service.impl.RightManageCopyService" /> -->
+
+	<class id="IDataCopyService" menuId="dataCopy"
+		class="com.yss.platform.system.dataCopy.service.impl.DataCopyService" />
+
+	<class id="IRightManageCopyService" menuId="RightManage"
+		class="com.yss.platform.system.rightmanage.service.impl.RightManageCopyService" />
+	
+	<!-- 数据库更新记录 -->
+	
+	<class id="IDBUpdateLogService" menuId="dbUpdateLog" interface="com.yss.platform.system.dbUpdateLog.service.IDBUpdateLogService" 
+	class="com.yss.platform.system.dbUpdateLog.service.impl.DBUpdateLogService" />
+	
+	<!--
+		<class id="IRightManageCopyService" menuId="RightManage"
+		class="com.yss.platform.system.rightmanage.service.impl.RightManageCopyService"
+		/>
+	-->
+	
+	<class id="IAdminUserService" menuId="" interface="com.yss.platform.system.user.service.IAdminUserService" class="com.yss.platform.system.user.service.impl.AdminUserService"></class>
+		<class id="IMessageOperService" meunId="MessageBox" interface="com.yss.platform.support.messagecenter.service.IMessageOperService" class="com.yss.platform.msgcenter.service.impl.MessageOperService"></class>
+
+	<class id="ISourceService" menuId="sourcemgr" interface="com.yss.platform.resource.source.service.ISourceService" class="com.yss.platform.resource.source.service.impl.SourceService"></class>
+	
+	<!-- 调度方案设置 -->
+	<!-- class id="IDispatchManagerService" menuId="dispatch" interface="com.yss.platform.schedulingscheme.service.IDispatchManagerService" class="com.yss.platform.schedulingscheme.service.impl.DispatchManagerService"></class>
+	<class id="IDispatchManagerDataService" menuId="dispatch" interface="com.yss.platform.support.dataservice.service.IDispatchManagerDataService" class="com.yss.platform.schedulingscheme.service.impl.DispatchManagerDataService"></class-->
+	<!-- 业务的执行日志 -->
+	<class id="IBizRunLogService" menuId="runLogQuery" interface="com.yss.busoper.status.IBizRunLogService" class="com.yss.busoper.status.runlog.BizRunLogService"></class>
+
+	<!-- 即时通 -->
+	<class id="ITalkService" menuId="" interface="com.yss.platform.tray.talk.service.ITalkService" class="com.yss.platform.tray.talk.service.impl.TalkService"></class>
+
+	<!-- 批处理审核数据 -->
+	<class id="IBatchUnauditService" menuId="" interface="com.yss.platform.dataauditmgr.service.IBatchUnauditService" class="com.yss.platform.dataauditmgr.service.impl.BatchUnauditService"></class>
+	
+	<!-- start任务管理的服务  -->
+	<!--
+	<class id="IJobDescService" menuId="" interface="com.yss.platform.task.job.service.IJobDescService" class="com.yss.platform.task.job.service.impl.JobDescService"></class>
+	<class id="ISchedulerService" menuId="" interface="com.yss.platform.task.job.service.ISchedulerService" class="com.yss.platform.task.job.service.impl.SchedulerService"></class>
+	<class id="IParamMetaService" menuId="" interface="com.yss.platform.task.parameta.service.IParamMetaService" class="com.yss.platform.task.parameta.service.impl.ParamMetaService"></class>
+	<class id="IRemIdrService" menuId="" interface="com.yss.platform.task.remidr.service.IRemIdrService" class="com.yss.platform.task.remidr.service.impl.RemIdrService"></class>
+	
+	<class id="ITaskItemService" menuId="" interface="com.yss.platform.task.taskitem.service.ITaskItemService" class="com.yss.platform.task.taskitem.service.impl.TaskItemService"></class>
+	<class id="ITaskParamService" menuId="" interface="com.yss.platform.task.taskparam.service.ITaskParamService" class="com.yss.platform.task.taskparam.service.impl.TaskParamService"></class>
+	<class id="ITriggerService" menuId="" interface="com.yss.platform.task.trigger.service.ITriggerService" class="com.yss.platform.task.trigger.service.impl.TriggerService"></class>
+	-->
+	<!-- end任务管理的服务  -->
+	<!-- 关联菜单设置 -->
+	<class id="IInlineFunService" menuId="inlineFun" interface = "com.yss.platform.inlinefun.service.IInlineFunService" class="com.yss.platform.inlinefun.service.impl.InlineFunService" />
+	<!-- 自定义菜单 -->
+	<class id="ICustomFunService" menuId="customFun" interface = "com.yss.platform.system.customfun.service.ICustomFunService" class="com.yss.platform.system.customfun.service.impl.CustomFunService"/>
+
+	<class id="IRoleRelaDataService" menuId="" interface = "dataservice.service.IRoleRelaDataService" class="com.yss.platform.system.rolerela.service.impl.RoleRelaDataService"/>
+
+	<class id="IBizControlFactorDataService" menuId="" interface="com.yss.platform.support.dataservice.service.IBizControlFactorDataService" class="com.yss.platform.dataservice.busoper.service.impl.BizControlFactorDataService"></class>
+	<class id="ICommonReportService" menuId="commonReport" interface="com.yss.platform.system.commonreport.service.ICommonReportService" class="com.yss.platform.system.commonreport.service.impl.CommonReportService"/>
+	
+	<!-- 导航栏 -->
+	<class id="INavigationService" menuId="workflowSet" interface="com.yss.platform.navigation.service.INavigationService" class="com.yss.platform.navigation.service.impl.NavigationService"/>
+	
+	<class id="IFilePathService" menuId="" interface="com.yss.platform.support.eastfax.service.IFilePathService" class="com.yss.platform.eastfax.service.impl.FilePathService"/>
+	
+	<class id="IWebserviceMgrService" menuId="ServiceManage" interface="com.yss.platform.webservicemgr.service.IWebserviceMgrService" class="com.yss.platform.webservicemgr.service.impl.WebserviceMgrService"/>
+	
+	<class id="IPortOperValidService" menuId="" interface="com.yss.platform.support.portopervalid.service.IPortOperValidService" class="com.yss.platform.portopervalid.service.impl.PortOperValidService"/>
+	
+	<!-- 附件服务 -->
+	<class id="IDataEnclosureService" menuId="dataEnclosure" interface="com.yss.platform.support.enclosure.service.IDataEnclosureService"
+	class="com.yss.platform.enclosure.service.impl.DataEnclosureService" />
+	
+	<!--电子公章-->
+	<class id="IElectronicSealService" menuId="ElectronicSeal" interface="com.yss.platform.support.seal.service.IElectronicSealService" class="com.yss.platform.seal.service.impl.ElectronicSealService"/>
+	<!-- STORY #46087 电子签章权限设置 by huangjunxiong 2017-09-06 -->
+	<class id="IElecSealRightService" menuId="sealPwdMgr" interface="com.yss.platform.support.seal.service.IElecSealRightService" class="com.yss.platform.seal.service.impl.ElecSealRightService"/>
+	<class id="IElecSealFileService" menuId="sealPwdMgr" interface="com.yss.platform.support.seal.service.IElecSealFileService" class="com.yss.platform.seal.service.impl.ElecSealFileService"/>
+    <class id="IElecSealFileDataService" menuId="sealPwdMgr" interface="com.yss.platform.support.seal.service.IElecSealFileDataService" class="com.yss.platform.seal.service.impl.ElecSealFileDataService"/>
+   	<class id="IElecSealRelaService" menuId="sealPwdMgr" interface="com.yss.platform.support.seal.service.IElecSealRelaService" class="com.yss.platform.seal.service.impl.ElecSealRelaService"/>
+	<!-- 邮件功能拆分成单独的模块 by leijianhua STORY #27868 -->
+	<!-- 邮件 
+	<class id="IMailServerService" menuId="mailServer" interface="com.yss.platform.mail.server.service.IMailServerService" class=
+	"com.yss.platform.mail.server.service.impl.MailServerService" />
+	
+	<class id="IMailPolicyService" menuId="mailPolicy" interface="com.yss.platform.mail.policy.service.IMailPolicyService" class=
+	"com.yss.platform.mail.policy.service.impl.MailPolicyService" />
+	
+	<class id="ISendMailService" menuId="sendedMail" interface="com.yss.platform.mail.send.service.ISendMailService" class=
+	"com.yss.platform.mail.send.service.impl.SendMailService" />
+	
+	<class id="IMailServerDataService" menuId="mailServer" interface="com.yss.platform.mail.server.service.IMailServerDataService" class=
+	"com.yss.platform.mail.server.service.impl.MailServerDataService" />-->
+	<!-- 公告管理 -->
+	<class id="INoticeService" menuId="Notice" interface="com.yss.platform.workspace.service.INoticeService"
+	class="com.yss.platform.workspace.service.impl.NoticeService" />
+	<!-- 文件上传 -->
+	<class id="ICommonFileUploadService" menuId="Notice" interface="com.yss.platform.system.fileupload.service.ICommonFileUploadService"
+	class="com.yss.platform.system.fileupload.service.impl.CommonFileUploadService" />
+	<class id="IExpOperLog" menuId="" interface="com.yss.platform.system.operLog.service.IExpOperLog" class="com.yss.platform.system.operLog.service.impl.ExpOperLog" />
+	
+	<!-- 20151106 added by liubo.BUG #121553 每日导出的临时文件需要自动清理.PlatForm下导出文件目录的处理服务 -->
+	<class id="IExpFileOperService" menuId="" interface="com.yss.platform.support.fileoper.expfile.service.IExpFileOperService" class="com.yss.platform.fileoper.expfile.service.ExpFileOperService" />
+	
+	<!-- licence -->
+	<class id="IBaseLicenseService" menuId="" interface="com.yss.framework.service.IBaseLicenseService" class="com.yss.platform.system.license.service.impl.LicenseService" />
+	<class id="IThirdUserService" menuId="" interface="com.yss.framework.service.IThirdUserService" class="com.yss.platform.system.user.service.impl.ThirdUserService" />
+    
+   
+   	<!-- 消息盒子 -->
+	<class id="ICheckReadFlagService"
+		interface="com.yss.platform.support.dataservice.service.ICheckReadFlagService"
+		menuId=""
+		class="com.yss.platform.dataservice.msg.service.impl.CheckReadFlagService" />
+	<class id="ICheckSendTypeService"
+		interface="com.yss.platform.support.dataservice.service.ICheckSendTypeService"
+		menuId=""
+		class="com.yss.platform.dataservice.msg.service.impl.CheckSendTypeService" />
+		
+    <!-- 白名单管理 -->
+   <class id="IWhiteNameService"
+		interface="com.yss.platform.system.whitename.service.IWhiteNameService"
+		menuId="whiteName"
+		class="com.yss.platform.system.whitename.service.impl.WhiteNameService" />
+	<class id="IWhiteAddrDataService"
+		interface="com.yss.platform.support.dataservice.service.IWhiteAddrDataService"
+		menuId=""
+		class="com.yss.platform.system.whitename.service.impl.WhiteAddrDataService" />
+		
+	<!-- 资源管理器 -->
+    <class id="IResourceMgrService" menuId="resourcemgr" interface="com.yss.framework.resource.mgr.service.IResourceMgrService" class="com.yss.platform.resource.mgr.service.impl.ResourceMgrService"></class>
+	
+	<!-- 电话拨号 -->
+	<class id="IDailPhoneService"
+		interface="com.yss.platform.support.dailphone.service.IDailPhoneService"
+		menuId=""
+		class="com.yss.platform.dailphone.service.impl.DailPhoneService" />
+	<!-- 增值税方案设置提醒面板 -->
+	<class id="IVatPlanSecVarPanelService"
+		interface="com.yss.platform.support.workspace.panel.service.IVatPlanSecVarPanelService"
+		menuId="vatPlanSecVar"
+		class="com.yss.platform.workspace.panel.service.impl.VatPlanSecVarPanelService" />
+</classes>

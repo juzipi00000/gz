@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 产品信息 描述文件
+	由于维护产品的层级关系。
+	注意：定义的模块代码不能重复
+-->
+<!-- code:产品代码， name:产品名称 -->
+<product code="UnifypayDbUp" name="支付平台">
+	<!-- 系统模块  code:一级模块代码， name:一级模块名称-->
+	<module_1 code="SYSTEM" name="系统" >
+		<!-- 通讯组件模块 code:二级模块代码      name: 二级模块名称 -->
+		<module_2 code="UnifypayDbUp_baseP" name="基本参数">
+		   <module_3 code="UnifypayDbUp_paySettleSet" name="收支结转" >
+		
+		   </module_3>
+		   <module_3 code="UnifypayDbUp_pdDueClear" name="产品到期清算" >
+		
+		   </module_3>
+		   <module_3 code="UnifypayDbUp_cusconfig" name="导入接口配置" >
+		
+		   </module_3>
+		   <module_3 code="UnifypayDbUp_MonFundcalRep" name="货币基金和日历" >
+		
+		   </module_3>
+		   
+			<module_3 code="UnifypayDbUp_ACC" name="产品账户" >
+		
+		   </module_3>
+		   
+		   <module_3 code="UnifypayDbUp_BUSTYPE_RELA" name="业务类型映射" >
+		
+		   </module_3>
+		   <module_3 code="UnifypayDbUp_emailMgr" name="邮件管理" >
+		
+		   </module_3>
+		   
+		   
+		</module_2>
+		<module_2 code="UnifypayDbUp_PayParam" name="支付参数">
+		    <module_3 code="UnifypayDbUp_fax" name="传真模板" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_rightsMgr" name="指令权限" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_usenoteMgr" name="用途和备注" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_unifyPayParams_ufp" name="支付平台综合参数" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_elesignMgr" name="电子签章" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_eleFaxConfig" name="电子传真设置" >
+		    </module_3>
+		     <module_3 code="UnifypayDbUp_zdhkzl" name="自动划款指令" >
+		    </module_3>
+		      <module_3 code="UnifypayDbUp_workFlow" name="流程审批设置" >
+		    </module_3>
+		       <module_3 code="UnifypayDbUp_hkzlTplateRela_uf" name="支付指令模板匹配" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_feeSplit" name="费用拆分设置" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_fundBeginPara" name="开基业务参数" >
+		    </module_3>
+		    
+		    
+		</module_2>
+		<module_2 code="UnifypayDbUp_PayBuild" name="指令制作">
+		    <module_3 code="UnifypayDbUp_DVPMgr" name="DVP指令管理" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_OAandthird" name="第三方以及OA" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_khzlMgr" name="开户指令" >
+		    </module_3>
+		     <module_3 code="UnifypayDbUp_allocationBus" name="调拨业务" >
+		    </module_3>
+		     <module_3 code="UnifypayDbUp_fixinc" name="固收业务" >
+		    </module_3>
+		    
+		</module_2>
+		<module_2 code="UnifypayDbUp_UnitPay" name="综合指令"></module_2>
+		<module_2 code="UnifypayDbUp_acctquery" name="账户查询">
+		    <module_3 code="UnifypayDbUp_zhcxMxMgr" name="账户明细查询" >
+		    </module_3>
+		    <module_3 code="UnifypayDbUp_zhcxYeMgr" name="账户余额查询" >
+		    </module_3>
+		
+		
+		</module_2>
+		<module_2 code="UnifypayDbUp_FJGL" name="附件管理"></module_2>
+		
+		<module_2 code="UnifypayDbUp_CashManagement" name="头寸管理"></module_2>
+		
+		
+	</module_1>
+</product>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pojos>
+	<pojo id="LoggingInfo" class="com.yss.framework.api.context.LoggingInfo"></pojo>
+	<pojo id="ShowInfo" class="com.yss.platform.showinfo.pojo.ShowInfo" ></pojo>
+	<!-- 系统功能模块 -->
+	<pojo id="SafeSys" class="com.yss.framework.api.common.co.SafeSystem" />
+	<pojo id="SafeData" class="com.yss.framework.api.common.co.SafeData" />
+	<pojo id="PwdAdmin" class="com.yss.platform.quick.pwdadm.pojo.PwdAdmin" />
+	<pojo id="SysFun" class="com.yss.framework.api.common.co.SysFun" />
+	<pojo id="RelevancyFun" class="com.yss.platform.resource.sysfun.pojo.RelevancyFun" />
+	<pojo id="Vocabulary" class="com.yss.platform.support.dataservice.pojo.dict.Vocabulary" />
+	<pojo id="VocabularyDi" class="com.yss.platform.system.vocabularydi.pojo.VocabularyDi" />
+	<!-- <pojo id="PortAssTree" class="com.yss.platform.support.comm.pojo.PortAssTree" /> -->
+	<pojo id="PortTreeView" class="com.yss.platform.system.port.pojo.PortTreeView" />
+	<pojo id="CopyData" class="com.yss.platform.system.dataCopy.pojo.CopyData" />
+	<!-- Added by huangsq Start 20160728 STORY #32244 词汇资源可控制是否显示 -->
+	<pojo id="DcCury" class="dataservice.comm.pojo.DcCury" />
+	<pojo id="VocabularyDi" class="com.yss.platform.system.vocabularydi.pojo.VocabularyDi" />
+	<pojo id="SecVarDi" class="dataservice.comm.pojo.SecVar" />
+	<pojo id="Mktsdi" class="com.yss.para.bi.mktsdi.pojo.Mktsdi" />
+	<!-- Added by huangsq End 20160728 STORY #32244 词汇资源可控制是否显示 -->
+	<!-- 用户管理 -->
+	<pojo id="User" class="com.yss.framework.api.common.co.User" />
+	<pojo id="UserRight" class="com.yss.platform.support.dataservice.pojo.UserRight" />
+	<pojo id="CorpOrgTreeView" class="com.yss.platform.system.corporg.pojo.CorpOrgTreeView" />
+	<pojo id="CorpOrg" class="com.yss.framework.api.common.co.CorpOrg" />
+	<pojo id="SqlMgrPojo" class="com.yss.platform.system.sqlMgr.pojo.SqlMgrPojo" />
+	<!-- 面板权限 -->
+	<pojo id="WorkSpaceSelfManager"
+		class="com.yss.platform.workspaceselfmanager.pojo.WorkSpaceSelfManager" />
+	<pojo id="WorkSpace" class="com.yss.platform.workspace.pojo.WorkSpace" />
+	<pojo id="WorkSpaceAuthority"
+		class="com.yss.platform.workspaceauthority.pojo.WorkSpaceAuthority" />
+	<pojo id="UserLic" class="com.yss.platform.system.license.pojo.UserLic" />
+	<pojo id="LicenseFile" class="com.yss.platform.system.license.pojo.LicenceFile" />
+
+	<!-- 岗位管理 -->
+	<pojo id="Post" class="com.yss.framework.api.common.co.Post" />
+	<pojo id="PostRelaQuery" class="com.yss.platform.system.post.pojo.PostRelaQuery" />
+	<pojo id="Role" class="com.yss.platform.system.role.pojo.Role" />
+	<pojo id="RoleRelaQuery" class="com.yss.platform.system.role.pojo.RoleRelaQuery" />
+	<pojo id="Oper" class="com.yss.platform.system.oper.pojo.Oper" />
+	<pojo id="OperRelaQuery" class="com.yss.platform.system.oper.pojo.OperRelaQuery" />
+	<pojo id="OperRela" class="com.yss.platform.system.operrela.pojo.OperRela" />
+
+	<pojo id="DbLink" class="com.yss.framework.api.common.co.DbLink" />
+
+	<!-- 参数管理 -->
+	<pojo id="AuthBail" class="com.yss.platform.system.authbail.pojo.AuthBail" />
+	<pojo id="RightManage" class="com.yss.platform.support.dataservice.pojo.UserRight" />
+	<pojo id="RightManageSave" class="com.yss.platform.system.rightmanage.pojo.UserRightSave" />
+	<pojo id="ClsAppInfo" class="com.yss.framework.api.common.co.Application" />
+	<pojo id="Port" class="com.yss.framework.api.common.co.Port" />
+	<pojo id="PostRelaUser" class="com.yss.platform.system.post.pojo.PostRelaUser"></pojo>
+	
+	<!-- 字典管理相关 -->
+	<!-- <pojo id="DaiDict" class="com.yss.platform.system.dictmgr.pojo.DaiDict"/>-->
+	<!-- 
+	<pojo id="AccEle" class="com.yss.platform.support.dataservice.pojo.dict.AccEle" />
+	-->
+	<!--  
+	<pojo id="AccType" class="com.yss.platform.support.dataservice.pojo.dict.AccType" />
+	-->
+	<!-- 
+	<pojo id="Dai" class="com.yss.platform.support.dataservice.pojo.dict.Dai" />
+	<pojo id="DaiDicQuy"
+		class="com.yss.platform.support.dataservice.pojo.dict.DaiDicQuy" />
+		-->
+<!-- 	<pojo id="DcCury" class="com.yss.platform.support.dataservice.pojo.dict.DcCury" /> -->
+<!-- 	<pojo id="DeExp" class="com.yss.platform.support.dataservice.pojo.dict.DeExp" /> -->
+	<pojo id="DocVoc" class="com.yss.platform.support.dataservice.pojo.dict.DocVoc" />
+<!-- 	<pojo id="DtatdAttr" -->
+<!-- 		class="com.yss.platform.support.dataservice.pojo.dict.DtatdAttr" /> -->
+<!-- 	<pojo id="DttdMode" class="com.yss.platform.support.dataservice.pojo.dict.DttdMode" /> -->
+<!-- 	<pojo id="DvaItem" class="com.yss.platform.support.dataservice.pojo.dict.DvaItem" /> -->
+<!-- 	<pojo id="FeeRelate" -->
+<!-- 		class="com.yss.platform.support.dataservice.pojo.dict.FeeRelate" /> -->
+<!-- 	<pojo id="FinItem" class="com.yss.platform.support.dataservice.pojo.dict.FinItem" /> -->
+<!-- 	<pojo id="IeItem" class="com.yss.platform.support.dataservice.pojo.dict.IeItem" /> -->
+	<pojo id="SecVarDiImport"
+		class="com.yss.platform.support.dataservice.pojo.dict.SecVarDiImport" />
+	<pojo id="Vocabulary"
+		class="com.yss.platform.support.dataservice.pojo.dict.Vocabulary" />
+
+	<pojo id="FileTrans" class="com.yss.framework.resource.mgr.pojo.FileTrans" />
+	<!-- <pojo id="OperLog" class="com.yss.platform.system.operLog.pojo.OperLog" /> -->
+	<pojo id="OperLog" class="com.yss.framework.log.OperLog" />
+	<pojo id="BEN_RECORD" class="com.yss.framework.api.common.co.BEN_RECORD" />
+	<pojo id="OnLineUser" class="com.yss.platform.resource.onlineuser.pojo.OnLineUser" />
+	<pojo id="Cls_NAVIGATION" class="com.yss.platform.workspace.pojo.BEN_WOKR_FLOW" />
+	<pojo id="ClsTemplate" class="com.yss.platform.support.comm.pojo.Template"></pojo>
+	<!-- 消息策略管理 -->
+	<pojo id="Remind" class="com.yss.platform.support.comm.pojo.Remind"/>
+	<pojo id="RemindPolicy" class="com.yss.platform.support.comm.pojo.RemindPolicy"/>
+	<!-- 数据库更新记录 -->
+	<pojo id="DBUpdateLog" class="com.yss.platform.support.dbUpdateLog.pojo.DBUpdateLog"/>
+	
+	<pojo id="UserMessage" class="com.yss.framework.api.msgcenter.UserMessageImpl"/>
+	<!-- 调度方案设置 -->
+	<!--  pojo id="DispatchManager" class="com.yss.platform.schedulingscheme.pojo.DispatchManager"/>
+	<pojo id="DispatchItem" class="com.yss.platform.schedulingscheme.pojo.DispatchItem"/>-->
+	
+	<!-- 组织架构 -->
+	<pojo id="CorpUser" class="com.yss.platform.support.dataservice.pojo.CorpUser"></pojo>
+        <!-- 关联菜单设置 -->
+	<pojo id="InlineFun" class="com.yss.platform.inlinefun.pojo.InlineFun"></pojo>
+	<!-- start任务管理的服务  -->
+	<!--  <pojo id="ParameterMeta" class="com.yss.platform.support.task.support.pojo.task.ParameterMeta"/>
+	<pojo id="TaskMeta" class="com.yss.platform.support.task.support.pojo.task.TaskMeta"/>
+	<pojo id="JobDesc" class="com.yss.platform.support.task.support.pojo.JobDesc"/>-->
+	<!-- end任务管理的服务  -->
+	<!-- 自定义菜单 -->
+	<pojo id="CustomFun" class="com.yss.platform.system.customfun.pojo.CustomFun"/>
+  <pojo id="FunPlan" class="com.yss.platform.system.customfun.pojo.FunPlan"/>
+	
+	<pojo id="SysMenu" class = "com.yss.platform.resource.sysfun.pojo.SysMenu"></pojo>
+	<!-- 常用报表 -->
+	<pojo id="CommonReport" class = "com.yss.platform.system.commonreport.pojo.CommonReport"/>
+	
+	<!-- 导航栏 -->
+	<pojo id="Navigation" class = "com.yss.platform.navigation.pojo.Navigation"/>
+	
+	<pojo id="InnerWServicePojo" class = "com.yss.framework.api.webservice.inside.xml.IWService"></pojo>
+	
+	<!-- 附件 -->
+	<pojo id="DataEnclosure" class = "com.yss.platform.support.enclosure.pojo.DataEnclosure"></pojo>
+	<!--  pojo id="DispatchItem" class = "com.yss.platform.support.schedulingscheme.pojo.DispatchItem"></pojo>
+	<pojo id="DispatchManager" class = "com.yss.platform.support.schedulingscheme.pojo.DispatchManager"></pojo>-->
+	<!-- 任务管理 -->
+	<!-- <pojo id="WFTaskInfo" class = "com.yss.platform.support.task.workflow.pojo.WFTaskInfo"></pojo>
+	<pojo id="ProcessTheme" class = "com.yss.platform.support.task.workflow.pojo.ProcessTheme"></pojo>
+	<pojo id="TaskInfo" class = "com.yss.platform.support.task.workflow.pojo.TaskInfo"></pojo> -->
+	
+	<!-- 邮件功能拆分成单独的模块 by leijianhua STORY #27868 -->
+	<!-- 邮件 
+	<pojo id="MailPolicy" class = "com.yss.platform.mail.policy.pojo.MailPolicy"></pojo>
+	<pojo id="MailServer" class = "com.yss.platform.mail.server.pojo.MailServer"></pojo>
+	<pojo id="SendedMail" class = "com.yss.platform.mail.send.pojo.SendedMail"></pojo> -->
+	<pojo id="UserMessageImpl" class="com.yss.framework.api.msgcenter.UserMessageImpl"/>
+	
+		<!--电子公章-->
+	<pojo id="ElectronicSeal" class = "com.yss.platform.support.seal.pojo.ElectronicSeal"></pojo>
+	<!-- STORY #46087 电子签章权限设置 by huangjunxiong 2017-09-06 -->
+	<pojo id="ElecSealRight" class = "com.yss.platform.support.seal.pojo.ElecSealRight"></pojo>
+	<pojo id="ElecSealFile" class = "com.yss.platform.support.seal.pojo.ElecSealFile"></pojo>
+	<pojo id="BaseSealRelaInfo" class = "com.yss.platform.support.seal.pojo.BaseSealRelaInfo"></pojo>
+		<!--公告-->
+	<pojo id="Notice" class = "com.yss.platform.workspace.pojo.Notice"></pojo>
+	<pojo id="NoticeDetail" class = "com.yss.platform.workspace.pojo.NoticeDetail"></pojo>
+	
+	<pojo id="ClsRecordPojo" class="com.yss.framework.api.common.co.BEN_RECORD" />
+	<!-- 公共的文件上传文件模型 -->
+	<pojo id="CommonFileStreamParam" class="com.yss.framework.api.common.co.BEN_RECORD" />
+	<!-- 白名单 -->
+	<pojo id="WhiteName" class = "com.yss.platform.system.whitename.pojo.WhiteName"></pojo>
+	
+	<!-- 资源管理器 -->
+	<pojo id="ResourceMgr" class="com.yss.framework.resource.mgr.pojo.ResourceMgr"/>
+</pojos>

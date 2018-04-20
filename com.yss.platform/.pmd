@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd>
+    <useProjectRuleSet>false</useProjectRuleSet>
+    <ruleSetFile>.ruleset</ruleSetFile>
+    <rules>
+        <rule>
+            <name>checkConnection define in method</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>maxfuncheck</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>checkCorrectClosepst</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>TestSqlOverLongCondition</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>checkOringalExcption</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>YssClosePreparedStatement</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>checckCorrectResult</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>closeReultSet1</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>check systemout output</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>checLoggerout</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+        <rule>
+            <name>YssCloseConnection</name>
+            <ruleset>pmd20161028</ruleset>
+        </rule>
+    </rules>
+    <includeDerivedFiles>false</includeDerivedFiles>
+    <violationsAsErrors>true</violationsAsErrors>
+</pmd>

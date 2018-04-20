@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>  
+  <!-- log output to file  -->  
+  <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">    
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+      	<fileNamePattern>/ucolog/YSSPERIPHERAL/YSSPERIPHERAL-%d{yyyy-MM-dd}.log</fileNamePattern>  
+      	<minIndex>1</minIndex>   
+      	<maxIndex>100</maxIndex>    
+    </rollingPolicy>  
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">   
+     	<maxFileSize>10MB</maxFileSize>   
+   	</triggeringPolicy>  
+    <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder"> 
+    	<layout class="com.yss.framework.log.layout.Layout"> 
+      		<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%app] [%file : %line] %X{userName} %msg%n</pattern>  
+    	</layout>
+    	<charset>UTF-8</charset>
+    </encoder>  
+  </appender>  
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="com.yss.framework.log.layout.Layout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%app] %-5level %X{userName} - %msg%n</pattern>
+        </layout>
+  </appender>
+  <appender name="DATABASE" class="com.yss.framework.log.appender.OperLogAppender">
+  </appender>
+    
+  <!-- start log4jdbc -->
+  <logger name="druid.sql.Statement" level="DEBUG">
+  	<!-- <appender-ref ref="ROLLING" /> -->
+    <appender-ref ref="STDOUT"/>
+  </logger>
+  
+  <!-- 
+  <logger name="jdbc.sqlonly" level="DEBUG">
+  	<appender-ref ref="ROLLING" />  
+        <appender-ref ref="STDOUT"/>
+  </logger>
+  
+  <logger name="jdbc.resultset" level="INFO">
+  	<appender-ref ref="STDOUT" />
+  	<appender-ref ref="ROLLING" />
+  </logger>
+   -->
+   <!-- end log4jdbc -->
+   
+  <logger name="com.yss.framework" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>  
+  <logger name="com.yss.mvc" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  <logger name="operLogger.DB" level="INFO">  
+        <appender-ref ref="DATABASE" />  
+  </logger>
+  <Logger name="operLogger.FILE" level="INFO">
+  		<appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </Logger>
+  <logger name="com.yss.aval" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  <logger name="com.yss.calceng" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  
+  <logger name="com.yss.corecls" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+  <logger name="com.yss.elecreco" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+  <logger name="com.yss.pdmgr" level="INFO">
+  		<appender-ref ref="ROLLING" />
+  		<appender-ref ref="STDOUT" />
+  </logger>
+  <logger name="com.yss.fina" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger> 
+  
+  <logger name="com.yss.service" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+  <logger name="com.yss.servlet" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+  <logger name="com.yss.sysmgr" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+  <logger name="com.yss.systools" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+  <logger name="com.yss.task" level="INFO">  
+        <appender-ref ref="ROLLING" />  
+        <!-- <appender-ref ref="STDOUT"/> -->
+  </logger>
+ </configuration>
